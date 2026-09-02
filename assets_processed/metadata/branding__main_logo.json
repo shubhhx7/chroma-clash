@@ -1,0 +1,16 @@
+{
+  "id": "main-logo:main_logo",
+  "source": "Assets/branding/logo/main logo.png",
+  "processedPath": "assets_processed/branding/main_logo.png",
+  "kind": "still",
+  "width": 1942,
+  "height": 690,
+  "sourceRect": {
+    "x": 113,
+    "y": 14,
+    "w": 1942,
+    "h": 690,
+    "band": -1,
+    "index": -1
+  }
+}

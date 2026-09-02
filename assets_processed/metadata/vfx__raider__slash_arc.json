@@ -1,0 +1,16 @@
+{
+  "id": "raider-slash-vfx:slash_arc",
+  "source": "Assets/vfx/raider/01_raider_slash_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/raider/slash_arc.png",
+  "kind": "still",
+  "width": 177,
+  "height": 128,
+  "sourceRect": {
+    "x": 13,
+    "y": 256,
+    "w": 177,
+    "h": 128,
+    "band": 2,
+    "index": 0
+  }
+}

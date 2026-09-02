@@ -1,0 +1,16 @@
+{
+  "id": "logo:logo_badge",
+  "source": "Assets/branding/logo/01_game_logo_title_lockup_sheet.png",
+  "processedPath": "assets_processed/branding/logo_badge.png",
+  "kind": "still",
+  "width": 393,
+  "height": 332,
+  "sourceRect": {
+    "x": 1350,
+    "y": 550,
+    "w": 393,
+    "h": 332,
+    "band": 1,
+    "index": 3
+  }
+}

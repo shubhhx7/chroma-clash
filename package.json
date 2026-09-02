@@ -1,0 +1,35 @@
+{
+  "name": "chroma-clash",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "Chroma Clash - premium 2D browser fighting game (Phaser 3 + TypeScript + Vite)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "assets:audit": "tsx tools/audit-assets.ts",
+    "assets:process": "tsx tools/process-chroma.ts",
+    "assets:slice": "tsx tools/slice-sheet.ts",
+    "assets:normalize": "tsx tools/normalize-frames.ts",
+    "assets:manifest": "tsx tools/build-asset-manifest.ts",
+    "assets:validate": "tsx tools/validate-asset-usage.ts",
+    "assets:audio": "tsx tools/generate-combat-audio.ts"
+  },
+  "dependencies": {
+    "phaser": "^3.90.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0",
+    "playwright": "^1.62.1",
+    "sharp": "^0.35.3",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  }
+}

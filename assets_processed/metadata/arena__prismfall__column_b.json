@@ -1,0 +1,16 @@
+{
+  "id": "arena-midground:column_b",
+  "source": "Assets/arena/prismfall_courtyard/midground/03_arena_midground_architecture_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/column_b.png",
+  "kind": "still",
+  "width": 81,
+  "height": 196,
+  "sourceRect": {
+    "x": 528,
+    "y": 376,
+    "w": 81,
+    "h": 196,
+    "band": 1,
+    "index": 3
+  }
+}

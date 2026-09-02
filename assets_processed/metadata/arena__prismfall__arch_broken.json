@@ -1,0 +1,16 @@
+{
+  "id": "arena-midground:arch_broken",
+  "source": "Assets/arena/prismfall_courtyard/midground/03_arena_midground_architecture_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/arch_broken.png",
+  "kind": "still",
+  "width": 255,
+  "height": 165,
+  "sourceRect": {
+    "x": 83,
+    "y": 166,
+    "w": 255,
+    "h": 165,
+    "band": 0,
+    "index": 0
+  }
+}

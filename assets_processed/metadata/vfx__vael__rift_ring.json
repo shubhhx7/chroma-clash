@@ -1,0 +1,16 @@
+{
+  "id": "vael-vfx:rift_ring",
+  "source": "Assets/vfx/vael/04_vael_special_attack_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/vael/rift_ring.png",
+  "kind": "still",
+  "width": 188,
+  "height": 170,
+  "sourceRect": {
+    "x": 2,
+    "y": 340,
+    "w": 188,
+    "h": 170,
+    "band": 2,
+    "index": 0
+  }
+}

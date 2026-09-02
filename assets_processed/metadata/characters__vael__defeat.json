@@ -1,0 +1,97 @@
+{
+  "id": "hd2-vael-defeat",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_defeat_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/defeat.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 752,
+  "frameHeight": 452,
+  "frameCount": 6,
+  "fps": 9,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 752,
+      "h": 452,
+      "sourceRect": {
+        "x": 104,
+        "y": 109,
+        "w": 406,
+        "h": 344
+      }
+    },
+    {
+      "index": 1,
+      "x": 752,
+      "y": 0,
+      "w": 752,
+      "h": 452,
+      "sourceRect": {
+        "x": 558,
+        "y": 114,
+        "w": 412,
+        "h": 341
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 452,
+      "w": 752,
+      "h": 452,
+      "sourceRect": {
+        "x": 1050,
+        "y": 182,
+        "w": 396,
+        "h": 278
+      }
+    },
+    {
+      "index": 3,
+      "x": 752,
+      "y": 452,
+      "w": 752,
+      "h": 452,
+      "sourceRect": {
+        "x": 61,
+        "y": 647,
+        "w": 456,
+        "h": 257
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 904,
+      "w": 752,
+      "h": 452,
+      "sourceRect": {
+        "x": 539,
+        "y": 718,
+        "w": 429,
+        "h": 199
+      }
+    },
+    {
+      "index": 5,
+      "x": 752,
+      "y": 904,
+      "w": 752,
+      "h": 452,
+      "sourceRect": {
+        "x": 989,
+        "y": 797,
+        "w": 480,
+        "h": 119
+      }
+    }
+  ]
+}

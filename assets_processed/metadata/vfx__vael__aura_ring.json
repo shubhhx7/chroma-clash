@@ -1,0 +1,16 @@
+{
+  "id": "boss-aura-vfx:aura_ring",
+  "source": "Assets/vfx/vael/05_boss_aura_phase_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/vael/aura_ring.png",
+  "kind": "still",
+  "width": 180,
+  "height": 77,
+  "sourceRect": {
+    "x": 12,
+    "y": 154,
+    "w": 180,
+    "h": 77,
+    "band": -1,
+    "index": -1
+  }
+}

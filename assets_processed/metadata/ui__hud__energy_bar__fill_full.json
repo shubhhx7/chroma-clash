@@ -1,0 +1,16 @@
+{
+  "id": "energy-bar:fill_full",
+  "source": "Assets/ui/hud/neon_sci_fi_energy_bar_reference_sheet.png",
+  "processedPath": "assets_processed/ui/hud/energy_bar/fill_full.png",
+  "kind": "still",
+  "width": 676,
+  "height": 113,
+  "sourceRect": {
+    "x": 746,
+    "y": 638,
+    "w": 676,
+    "h": 113,
+    "band": 5,
+    "index": 1
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "id": "hd-kairo-walkback",
+  "source": "Assets/sprites/kairo/03_kairo_walk_backward_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/walkback.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 435,
+  "frameHeight": 391,
+  "frameCount": 8,
+  "fps": 10,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 75,
+        "y": 56,
+        "w": 319,
+        "h": 443
+      }
+    },
+    {
+      "index": 1,
+      "x": 435,
+      "y": 0,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 433,
+        "y": 56,
+        "w": 319,
+        "h": 442
+      }
+    },
+    {
+      "index": 2,
+      "x": 870,
+      "y": 0,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 783,
+        "y": 53,
+        "w": 315,
+        "h": 444
+      }
+    },
+    {
+      "index": 3,
+      "x": 1305,
+      "y": 0,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 1139,
+        "y": 58,
+        "w": 315,
+        "h": 440
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 391,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 1480,
+        "y": 55,
+        "w": 316,
+        "h": 443
+      }
+    },
+    {
+      "index": 5,
+      "x": 435,
+      "y": 391,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 1839,
+        "y": 57,
+        "w": 314,
+        "h": 441
+      }
+    },
+    {
+      "index": 6,
+      "x": 870,
+      "y": 391,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 2172,
+        "y": 56,
+        "w": 329,
+        "h": 442
+      }
+    },
+    {
+      "index": 7,
+      "x": 1305,
+      "y": 391,
+      "w": 435,
+      "h": 391,
+      "sourceRect": {
+        "x": 2508,
+        "y": 56,
+        "w": 290,
+        "h": 442
+      }
+    }
+  ]
+}

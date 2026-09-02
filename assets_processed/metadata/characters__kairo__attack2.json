@@ -1,0 +1,58 @@
+{
+  "id": "hd-kairo-light2",
+  "source": "Assets/sprites/kairo/kairo_attack_02_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/attack2.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 652,
+  "frameHeight": 409,
+  "frameCount": 3,
+  "fps": 14,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 652,
+      "h": 409,
+      "sourceRect": {
+        "x": 24,
+        "y": 676,
+        "w": 359,
+        "h": 280
+      }
+    },
+    {
+      "index": 1,
+      "x": 652,
+      "y": 0,
+      "w": 652,
+      "h": 409,
+      "sourceRect": {
+        "x": 384,
+        "y": 685,
+        "w": 244,
+        "h": 260
+      }
+    },
+    {
+      "index": 2,
+      "x": 1304,
+      "y": 0,
+      "w": 652,
+      "h": 409,
+      "sourceRect": {
+        "x": 629,
+        "y": 619,
+        "w": 470,
+        "h": 334
+      }
+    }
+  ]
+}

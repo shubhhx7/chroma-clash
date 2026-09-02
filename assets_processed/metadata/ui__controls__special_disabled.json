@@ -1,0 +1,16 @@
+{
+  "id": "special-button:special_disabled",
+  "source": "Assets/ui/controls/05_pause_settings_control_sheet.png",
+  "processedPath": "assets_processed/ui/controls/special_disabled.png",
+  "kind": "still",
+  "width": 338,
+  "height": 331,
+  "sourceRect": {
+    "x": 46,
+    "y": 73,
+    "w": 338,
+    "h": 331,
+    "band": 0,
+    "index": 0
+  }
+}

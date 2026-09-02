@@ -1,0 +1,97 @@
+{
+  "id": "hd2-vael-dodge",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_dodge_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/dodge.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 741,
+  "frameHeight": 443,
+  "frameCount": 6,
+  "fps": 13,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 741,
+      "h": 443,
+      "sourceRect": {
+        "x": 55,
+        "y": 96,
+        "w": 413,
+        "h": 337
+      }
+    },
+    {
+      "index": 1,
+      "x": 741,
+      "y": 0,
+      "w": 741,
+      "h": 443,
+      "sourceRect": {
+        "x": 552,
+        "y": 180,
+        "w": 437,
+        "h": 248
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 443,
+      "w": 741,
+      "h": 443,
+      "sourceRect": {
+        "x": 1039,
+        "y": 179,
+        "w": 437,
+        "h": 247
+      }
+    },
+    {
+      "index": 3,
+      "x": 741,
+      "y": 443,
+      "w": 741,
+      "h": 443,
+      "sourceRect": {
+        "x": 56,
+        "y": 710,
+        "w": 448,
+        "h": 170
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 886,
+      "w": 741,
+      "h": 443,
+      "sourceRect": {
+        "x": 543,
+        "y": 674,
+        "w": 399,
+        "h": 213
+      }
+    },
+    {
+      "index": 5,
+      "x": 741,
+      "y": 886,
+      "w": 741,
+      "h": 443,
+      "sourceRect": {
+        "x": 1061,
+        "y": 556,
+        "w": 413,
+        "h": 337
+      }
+    }
+  ]
+}

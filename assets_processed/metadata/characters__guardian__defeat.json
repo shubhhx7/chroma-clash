@@ -1,0 +1,97 @@
+{
+  "id": "hd-guardian-defeat",
+  "source": "Assets/sprites/guardian/24_guardian_defeat_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/defeat.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 789,
+  "frameHeight": 459,
+  "frameCount": 6,
+  "fps": 9,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 789,
+      "h": 459,
+      "sourceRect": {
+        "x": 96,
+        "y": 74,
+        "w": 389,
+        "h": 340
+      }
+    },
+    {
+      "index": 1,
+      "x": 789,
+      "y": 0,
+      "w": 789,
+      "h": 459,
+      "sourceRect": {
+        "x": 541,
+        "y": 135,
+        "w": 414,
+        "h": 279
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 459,
+      "w": 789,
+      "h": 459,
+      "sourceRect": {
+        "x": 1002,
+        "y": 185,
+        "w": 448,
+        "h": 236
+      }
+    },
+    {
+      "index": 3,
+      "x": 789,
+      "y": 459,
+      "w": 789,
+      "h": 459,
+      "sourceRect": {
+        "x": 69,
+        "y": 619,
+        "w": 448,
+        "h": 232
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 918,
+      "w": 789,
+      "h": 459,
+      "sourceRect": {
+        "x": 538,
+        "y": 645,
+        "w": 431,
+        "h": 234
+      }
+    },
+    {
+      "index": 5,
+      "x": 789,
+      "y": 918,
+      "w": 789,
+      "h": 459,
+      "sourceRect": {
+        "x": 982,
+        "y": 744,
+        "w": 505,
+        "h": 156
+      }
+    }
+  ]
+}

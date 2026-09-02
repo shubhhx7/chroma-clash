@@ -1,0 +1,16 @@
+{
+  "id": "pause-button:pause_pressed",
+  "source": "Assets/ui/controls/03_special_ability_button_sheet.png",
+  "processedPath": "assets_processed/ui/controls/pause_pressed.png",
+  "kind": "still",
+  "width": 308,
+  "height": 302,
+  "sourceRect": {
+    "x": 453,
+    "y": 88,
+    "w": 308,
+    "h": 302,
+    "band": 0,
+    "index": 1
+  }
+}

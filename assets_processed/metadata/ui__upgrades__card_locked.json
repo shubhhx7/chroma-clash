@@ -1,0 +1,16 @@
+{
+  "id": "upgrade-ui:card_locked",
+  "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",
+  "processedPath": "assets_processed/ui/upgrades/card_locked.png",
+  "kind": "still",
+  "width": 363,
+  "height": 560,
+  "sourceRect": {
+    "x": 926,
+    "y": 15,
+    "w": 363,
+    "h": 560,
+    "band": -1,
+    "index": -1
+  }
+}

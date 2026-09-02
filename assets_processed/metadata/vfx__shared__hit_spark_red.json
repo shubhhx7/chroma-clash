@@ -1,0 +1,16 @@
+{
+  "id": "hit-vfx:hit_spark_red",
+  "source": "Assets/vfx/shared_combat/06_hit_block_ko_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/shared/hit_spark_red.png",
+  "kind": "still",
+  "width": 92,
+  "height": 100,
+  "sourceRect": {
+    "x": 98,
+    "y": 2,
+    "w": 92,
+    "h": 100,
+    "band": 0,
+    "index": 1
+  }
+}

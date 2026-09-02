@@ -1,0 +1,16 @@
+{
+  "id": "weapon-icons:axe_selected",
+  "source": "Assets/weapons/kairo/icons/05_kairo_weapon_selection_icon_sheet.png",
+  "processedPath": "assets_processed/ui/weapons/axe_selected.png",
+  "kind": "still",
+  "width": 350,
+  "height": 364,
+  "sourceRect": {
+    "x": 1086,
+    "y": 133,
+    "w": 350,
+    "h": 364,
+    "band": 0,
+    "index": 3
+  }
+}

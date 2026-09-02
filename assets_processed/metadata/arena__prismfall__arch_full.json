@@ -1,0 +1,16 @@
+{
+  "id": "arena-midground:arch_full",
+  "source": "Assets/arena/prismfall_courtyard/midground/03_arena_midground_architecture_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/arch_full.png",
+  "kind": "still",
+  "width": 188,
+  "height": 187,
+  "sourceRect": {
+    "x": 360,
+    "y": 143,
+    "w": 188,
+    "h": 187,
+    "band": 0,
+    "index": 1
+  }
+}

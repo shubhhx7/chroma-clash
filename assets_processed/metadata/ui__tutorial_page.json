@@ -1,0 +1,16 @@
+{
+  "id": "tutorial-page:tutorial_page",
+  "source": "Assets/ui/tutorial/tutorial.png",
+  "processedPath": "assets_processed/ui/tutorial_page.png",
+  "kind": "still",
+  "width": 1536,
+  "height": 1024,
+  "sourceRect": {
+    "x": 0,
+    "y": 0,
+    "w": 1536,
+    "h": 1024,
+    "band": -1,
+    "index": -1
+  }
+}

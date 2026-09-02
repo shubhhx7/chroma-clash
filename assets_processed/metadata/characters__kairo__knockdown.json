@@ -1,0 +1,97 @@
+{
+  "id": "hd-kairo-knockdown",
+  "source": "Assets/sprites/kairo/kairo_knockdown_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/knockdown.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 475,
+  "frameHeight": 371,
+  "frameCount": 6,
+  "fps": 9,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 475,
+      "h": 371,
+      "sourceRect": {
+        "x": 101,
+        "y": 84,
+        "w": 392,
+        "h": 381
+      }
+    },
+    {
+      "index": 1,
+      "x": 475,
+      "y": 0,
+      "w": 475,
+      "h": 371,
+      "sourceRect": {
+        "x": 576,
+        "y": 124,
+        "w": 370,
+        "h": 333
+      }
+    },
+    {
+      "index": 2,
+      "x": 950,
+      "y": 0,
+      "w": 475,
+      "h": 371,
+      "sourceRect": {
+        "x": 1018,
+        "y": 156,
+        "w": 386,
+        "h": 298
+      }
+    },
+    {
+      "index": 3,
+      "x": 1425,
+      "y": 0,
+      "w": 475,
+      "h": 371,
+      "sourceRect": {
+        "x": 98,
+        "y": 648,
+        "w": 352,
+        "h": 252
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 371,
+      "w": 475,
+      "h": 371,
+      "sourceRect": {
+        "x": 521,
+        "y": 717,
+        "w": 440,
+        "h": 181
+      }
+    },
+    {
+      "index": 5,
+      "x": 475,
+      "y": 371,
+      "w": 475,
+      "h": 371,
+      "sourceRect": {
+        "x": 1012,
+        "y": 782,
+        "w": 452,
+        "h": 122
+      }
+    }
+  ]
+}

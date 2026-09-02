@@ -1,0 +1,123 @@
+{
+  "id": "hd-raider-knockdown",
+  "source": "Assets/sprites/raider/14_raider_knockdown_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/knockdown.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 561,
+  "frameHeight": 406,
+  "frameCount": 8,
+  "fps": 9,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 11,
+        "y": 74,
+        "w": 411,
+        "h": 371
+      }
+    },
+    {
+      "index": 1,
+      "x": 561,
+      "y": 0,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 485,
+        "y": 89,
+        "w": 341,
+        "h": 356
+      }
+    },
+    {
+      "index": 2,
+      "x": 1122,
+      "y": 0,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 885,
+        "y": 101,
+        "w": 437,
+        "h": 344
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 406,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 1350,
+        "y": 200,
+        "w": 398,
+        "h": 245
+      }
+    },
+    {
+      "index": 4,
+      "x": 561,
+      "y": 406,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 19,
+        "y": 444,
+        "w": 407,
+        "h": 392
+      }
+    },
+    {
+      "index": 5,
+      "x": 1122,
+      "y": 406,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 426,
+        "y": 444,
+        "w": 454,
+        "h": 378
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 812,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 894,
+        "y": 444,
+        "w": 432,
+        "h": 374
+      }
+    },
+    {
+      "index": 7,
+      "x": 561,
+      "y": 812,
+      "w": 561,
+      "h": 406,
+      "sourceRect": {
+        "x": 1332,
+        "y": 444,
+        "w": 429,
+        "h": 370
+      }
+    }
+  ]
+}

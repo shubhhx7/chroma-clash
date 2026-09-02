@@ -1,0 +1,123 @@
+{
+  "id": "hd-raider-walk",
+  "source": "Assets/sprites/raider/07_raider_walk_forward_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/walk.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 696,
+  "frameHeight": 433,
+  "frameCount": 8,
+  "fps": 10,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 11,
+        "y": 14,
+        "w": 436,
+        "h": 416
+      }
+    },
+    {
+      "index": 1,
+      "x": 696,
+      "y": 0,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 463,
+        "y": 12,
+        "w": 408,
+        "h": 418
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 433,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 904,
+        "y": 28,
+        "w": 363,
+        "h": 399
+      }
+    },
+    {
+      "index": 3,
+      "x": 696,
+      "y": 433,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 1327,
+        "y": 18,
+        "w": 419,
+        "h": 412
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 866,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 12,
+        "y": 460,
+        "w": 441,
+        "h": 411
+      }
+    },
+    {
+      "index": 5,
+      "x": 696,
+      "y": 866,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 448,
+        "y": 456,
+        "w": 413,
+        "h": 414
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1299,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 901,
+        "y": 468,
+        "w": 401,
+        "h": 403
+      }
+    },
+    {
+      "index": 7,
+      "x": 696,
+      "y": 1299,
+      "w": 696,
+      "h": 433,
+      "sourceRect": {
+        "x": 1319,
+        "y": 459,
+        "w": 435,
+        "h": 413
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "arena-far-background:distant_mountains",
+  "source": "Assets/arena/prismfall_courtyard/far_background/02_arena_far_background_layer_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/distant_mountains.png",
+  "kind": "still",
+  "width": 542,
+  "height": 147,
+  "sourceRect": {
+    "x": 172,
+    "y": 431,
+    "w": 542,
+    "h": 147,
+    "band": 2,
+    "index": 0
+  }
+}

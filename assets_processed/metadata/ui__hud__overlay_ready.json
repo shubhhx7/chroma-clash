@@ -1,0 +1,16 @@
+{
+  "id": "overlay-ready-hd",
+  "source": "Assets/ui/menus/ready.png",
+  "processedPath": "assets_processed/ui/hud/overlay_ready.png",
+  "kind": "still",
+  "passthrough": true,
+  "sha256": "cbf96239be92a3079168de30179c4f353933618a194e1045ecf15e256e4ab0cd",
+  "width": 1672,
+  "height": 941,
+  "contentRect": {
+    "x": 8,
+    "y": 179,
+    "w": 1656,
+    "h": 539
+  }
+}

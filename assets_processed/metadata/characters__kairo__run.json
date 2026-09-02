@@ -1,0 +1,123 @@
+{
+  "id": "hd-kairo-run",
+  "source": "Assets/sprites/kairo/04_kairo_run_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/run.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 483,
+  "frameHeight": 374,
+  "frameCount": 8,
+  "fps": 12,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 9,
+        "y": 44,
+        "w": 400,
+        "h": 376
+      }
+    },
+    {
+      "index": 1,
+      "x": 483,
+      "y": 0,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 442,
+        "y": 43,
+        "w": 405,
+        "h": 378
+      }
+    },
+    {
+      "index": 2,
+      "x": 966,
+      "y": 0,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 870,
+        "y": 25,
+        "w": 422,
+        "h": 393
+      }
+    },
+    {
+      "index": 3,
+      "x": 1449,
+      "y": 0,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 1325,
+        "y": 47,
+        "w": 409,
+        "h": 373
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 374,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 5,
+        "y": 473,
+        "w": 398,
+        "h": 377
+      }
+    },
+    {
+      "index": 5,
+      "x": 483,
+      "y": 374,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 444,
+        "y": 490,
+        "w": 404,
+        "h": 369
+      }
+    },
+    {
+      "index": 6,
+      "x": 966,
+      "y": 374,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 873,
+        "y": 464,
+        "w": 423,
+        "h": 369
+      }
+    },
+    {
+      "index": 7,
+      "x": 1449,
+      "y": 374,
+      "w": 483,
+      "h": 374,
+      "sourceRect": {
+        "x": 1332,
+        "y": 479,
+        "w": 407,
+        "h": 384
+      }
+    }
+  ]
+}

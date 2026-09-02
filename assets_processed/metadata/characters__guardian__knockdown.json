@@ -1,0 +1,110 @@
+{
+  "id": "hd-guardian-knockdown",
+  "source": "Assets/sprites/guardian/23_guardian_knockdown_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/knockdown.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 644,
+  "frameHeight": 440,
+  "frameCount": 7,
+  "fps": 9,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 65,
+        "y": 106,
+        "w": 364,
+        "h": 318
+      }
+    },
+    {
+      "index": 1,
+      "x": 644,
+      "y": 0,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 490,
+        "y": 107,
+        "w": 352,
+        "h": 319
+      }
+    },
+    {
+      "index": 2,
+      "x": 1288,
+      "y": 0,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 911,
+        "y": 216,
+        "w": 374,
+        "h": 217
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 440,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 1325,
+        "y": 242,
+        "w": 389,
+        "h": 186
+      }
+    },
+    {
+      "index": 4,
+      "x": 644,
+      "y": 440,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 25,
+        "y": 621,
+        "w": 383,
+        "h": 182
+      }
+    },
+    {
+      "index": 5,
+      "x": 1288,
+      "y": 440,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 448,
+        "y": 665,
+        "w": 405,
+        "h": 140
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 880,
+      "w": 644,
+      "h": 440,
+      "sourceRect": {
+        "x": 885,
+        "y": 692,
+        "w": 408,
+        "h": 129
+      }
+    }
+  ]
+}

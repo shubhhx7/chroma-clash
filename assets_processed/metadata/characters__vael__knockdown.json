@@ -1,0 +1,97 @@
+{
+  "id": "hd2-vael-knockdown",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_knockdown_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/knockdown.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 847,
+  "frameHeight": 434,
+  "frameCount": 6,
+  "fps": 9,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 847,
+      "h": 434,
+      "sourceRect": {
+        "x": 47,
+        "y": 157,
+        "w": 434,
+        "h": 330
+      }
+    },
+    {
+      "index": 1,
+      "x": 847,
+      "y": 0,
+      "w": 847,
+      "h": 434,
+      "sourceRect": {
+        "x": 547,
+        "y": 206,
+        "w": 456,
+        "h": 264
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 434,
+      "w": 847,
+      "h": 434,
+      "sourceRect": {
+        "x": 1045,
+        "y": 323,
+        "w": 444,
+        "h": 164
+      }
+    },
+    {
+      "index": 3,
+      "x": 847,
+      "y": 434,
+      "w": 847,
+      "h": 434,
+      "sourceRect": {
+        "x": 24,
+        "y": 722,
+        "w": 462,
+        "h": 211
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 868,
+      "w": 847,
+      "h": 434,
+      "sourceRect": {
+        "x": 530,
+        "y": 786,
+        "w": 430,
+        "h": 165
+      }
+    },
+    {
+      "index": 5,
+      "x": 847,
+      "y": 868,
+      "w": 847,
+      "h": 434,
+      "sourceRect": {
+        "x": 1041,
+        "y": 841,
+        "w": 441,
+        "h": 114
+      }
+    }
+  ]
+}

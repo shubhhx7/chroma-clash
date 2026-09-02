@@ -1,0 +1,110 @@
+{
+  "id": "hd2-vael-attack2",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_attack_02_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/attack2.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 881,
+  "frameHeight": 577,
+  "frameCount": 7,
+  "fps": 12,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 43,
+        "y": 23,
+        "w": 274,
+        "h": 406
+      }
+    },
+    {
+      "index": 1,
+      "x": 881,
+      "y": 0,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 419,
+        "y": 113,
+        "w": 348,
+        "h": 311
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 577,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 851,
+        "y": 157,
+        "w": 463,
+        "h": 267
+      }
+    },
+    {
+      "index": 3,
+      "x": 881,
+      "y": 577,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 1321,
+        "y": 156,
+        "w": 360,
+        "h": 268
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 1154,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 30,
+        "y": 564,
+        "w": 468,
+        "h": 244
+      }
+    },
+    {
+      "index": 5,
+      "x": 881,
+      "y": 1154,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 499,
+        "y": 567,
+        "w": 391,
+        "h": 258
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1731,
+      "w": 881,
+      "h": 577,
+      "sourceRect": {
+        "x": 949,
+        "y": 531,
+        "w": 382,
+        "h": 293
+      }
+    }
+  ]
+}

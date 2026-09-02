@@ -1,0 +1,16 @@
+{
+  "id": "arena-far-background:far_ruins",
+  "source": "Assets/arena/prismfall_courtyard/far_background/02_arena_far_background_layer_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/far_ruins.png",
+  "kind": "still",
+  "width": 543,
+  "height": 149,
+  "sourceRect": {
+    "x": 171,
+    "y": 588,
+    "w": 543,
+    "h": 149,
+    "band": 3,
+    "index": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "boss-defeat-vfx:boss_defeat_pillar",
+  "source": "Assets/vfx/shared_combat/08_final_victory_boss_defeat_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/shared/boss_defeat_pillar.png",
+  "kind": "still",
+  "width": 163,
+  "height": 336,
+  "sourceRect": {
+    "x": 211,
+    "y": 12,
+    "w": 163,
+    "h": 336,
+    "band": -1,
+    "index": -1
+  }
+}

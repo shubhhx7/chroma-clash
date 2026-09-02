@@ -1,0 +1,16 @@
+{
+  "id": "boss-aura-vfx:aura_crest",
+  "source": "Assets/vfx/vael/05_boss_aura_phase_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/vael/aura_crest.png",
+  "kind": "still",
+  "width": 165,
+  "height": 118,
+  "sourceRect": {
+    "x": 211,
+    "y": 138,
+    "w": 165,
+    "h": 118,
+    "band": -1,
+    "index": -1
+  }
+}

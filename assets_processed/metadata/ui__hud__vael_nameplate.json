@@ -1,0 +1,14 @@
+{
+  "id": "boss-nameplate:vael_nameplate",
+  "source": "Assets/ui/hud/07_boss_health_nameplate_sheet.png",
+  "processedPath": "assets_processed/ui/hud/vael_nameplate.png",
+  "kind": "still",
+  "width": 708,
+  "height": 187,
+  "sourceRect": {
+    "x": 43,
+    "y": 30,
+    "w": 708,
+    "h": 187
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "weapon-icons:locked",
+  "source": "Assets/weapons/kairo/icons/05_kairo_weapon_selection_icon_sheet.png",
+  "processedPath": "assets_processed/ui/weapons/locked.png",
+  "kind": "still",
+  "width": 345,
+  "height": 365,
+  "sourceRect": {
+    "x": 724,
+    "y": 583,
+    "w": 345,
+    "h": 365,
+    "band": 1,
+    "index": 2
+  }
+}

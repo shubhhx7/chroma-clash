@@ -1,0 +1,123 @@
+{
+  "id": "hd-guardian-attack1",
+  "source": "Assets/sprites/guardian/19_guardian_attack_01_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/attack.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 624,
+  "frameHeight": 521,
+  "frameCount": 8,
+  "fps": 11,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 72,
+        "y": 115,
+        "w": 332,
+        "h": 297
+      }
+    },
+    {
+      "index": 1,
+      "x": 624,
+      "y": 0,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 529,
+        "y": 152,
+        "w": 278,
+        "h": 262
+      }
+    },
+    {
+      "index": 2,
+      "x": 1248,
+      "y": 0,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 948,
+        "y": 44,
+        "w": 266,
+        "h": 370
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 521,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 1336,
+        "y": 174,
+        "w": 351,
+        "h": 255
+      }
+    },
+    {
+      "index": 4,
+      "x": 624,
+      "y": 521,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 90,
+        "y": 552,
+        "w": 296,
+        "h": 278
+      }
+    },
+    {
+      "index": 5,
+      "x": 1248,
+      "y": 521,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 533,
+        "y": 543,
+        "w": 288,
+        "h": 261
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1042,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 911,
+        "y": 525,
+        "w": 315,
+        "h": 287
+      }
+    },
+    {
+      "index": 7,
+      "x": 624,
+      "y": 1042,
+      "w": 624,
+      "h": 521,
+      "sourceRect": {
+        "x": 1328,
+        "y": 524,
+        "w": 316,
+        "h": 288
+      }
+    }
+  ]
+}

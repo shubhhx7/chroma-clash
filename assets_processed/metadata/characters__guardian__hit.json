@@ -1,0 +1,97 @@
+{
+  "id": "hd-guardian-hit",
+  "source": "Assets/sprites/guardian/22_guardian_hit_reaction_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/hit.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 581,
+  "frameHeight": 468,
+  "frameCount": 6,
+  "fps": 12,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 581,
+      "h": 468,
+      "sourceRect": {
+        "x": 92,
+        "y": 62,
+        "w": 408,
+        "h": 367
+      }
+    },
+    {
+      "index": 1,
+      "x": 581,
+      "y": 0,
+      "w": 581,
+      "h": 468,
+      "sourceRect": {
+        "x": 561,
+        "y": 86,
+        "w": 406,
+        "h": 351
+      }
+    },
+    {
+      "index": 2,
+      "x": 1162,
+      "y": 0,
+      "w": 581,
+      "h": 468,
+      "sourceRect": {
+        "x": 1028,
+        "y": 95,
+        "w": 418,
+        "h": 344
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 468,
+      "w": 581,
+      "h": 468,
+      "sourceRect": {
+        "x": 96,
+        "y": 567,
+        "w": 416,
+        "h": 344
+      }
+    },
+    {
+      "index": 4,
+      "x": 581,
+      "y": 468,
+      "w": 581,
+      "h": 468,
+      "sourceRect": {
+        "x": 556,
+        "y": 601,
+        "w": 411,
+        "h": 311
+      }
+    },
+    {
+      "index": 5,
+      "x": 1162,
+      "y": 468,
+      "w": 581,
+      "h": 468,
+      "sourceRect": {
+        "x": 1041,
+        "y": 531,
+        "w": 407,
+        "h": 371
+      }
+    }
+  ]
+}

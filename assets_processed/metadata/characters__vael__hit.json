@@ -1,0 +1,71 @@
+{
+  "id": "hd2-vael-hit",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_hit_reaction_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/hit.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 738,
+  "frameHeight": 473,
+  "frameCount": 4,
+  "fps": 12,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 738,
+      "h": 473,
+      "sourceRect": {
+        "x": 93,
+        "y": 150,
+        "w": 519,
+        "h": 410
+      }
+    },
+    {
+      "index": 1,
+      "x": 738,
+      "y": 0,
+      "w": 738,
+      "h": 473,
+      "sourceRect": {
+        "x": 659,
+        "y": 194,
+        "w": 492,
+        "h": 366
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 473,
+      "w": 738,
+      "h": 473,
+      "sourceRect": {
+        "x": 77,
+        "y": 753,
+        "w": 500,
+        "h": 371
+      }
+    },
+    {
+      "index": 3,
+      "x": 738,
+      "y": 473,
+      "w": 738,
+      "h": 473,
+      "sourceRect": {
+        "x": 662,
+        "y": 687,
+        "w": 510,
+        "h": 437
+      }
+    }
+  ]
+}

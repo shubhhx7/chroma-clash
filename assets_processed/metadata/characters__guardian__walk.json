@@ -1,0 +1,123 @@
+{
+  "id": "hd-guardian-walk",
+  "source": "Assets/sprites/guardian/17_guardian_walk_forward_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/walk.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 655,
+  "frameHeight": 499,
+  "frameCount": 8,
+  "fps": 8,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 56,
+        "y": 59,
+        "w": 372,
+        "h": 325
+      }
+    },
+    {
+      "index": 1,
+      "x": 655,
+      "y": 0,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 481,
+        "y": 59,
+        "w": 369,
+        "h": 326
+      }
+    },
+    {
+      "index": 2,
+      "x": 1310,
+      "y": 0,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 915,
+        "y": 59,
+        "w": 363,
+        "h": 325
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 499,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 1324,
+        "y": 59,
+        "w": 356,
+        "h": 327
+      }
+    },
+    {
+      "index": 4,
+      "x": 655,
+      "y": 499,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 57,
+        "y": 472,
+        "w": 364,
+        "h": 327
+      }
+    },
+    {
+      "index": 5,
+      "x": 1310,
+      "y": 499,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 474,
+        "y": 474,
+        "w": 360,
+        "h": 333
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 998,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 907,
+        "y": 475,
+        "w": 358,
+        "h": 331
+      }
+    },
+    {
+      "index": 7,
+      "x": 655,
+      "y": 998,
+      "w": 655,
+      "h": 499,
+      "sourceRect": {
+        "x": 1331,
+        "y": 475,
+        "w": 361,
+        "h": 334
+      }
+    }
+  ]
+}

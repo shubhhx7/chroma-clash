@@ -1,0 +1,123 @@
+{
+  "id": "hd-raider-run",
+  "source": "Assets/sprites/raider/08_raider_run_chase_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/run.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 793,
+  "frameHeight": 432,
+  "frameCount": 8,
+  "fps": 12,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 17,
+        "y": 21,
+        "w": 463,
+        "h": 398
+      }
+    },
+    {
+      "index": 1,
+      "x": 793,
+      "y": 0,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 447,
+        "y": 18,
+        "w": 439,
+        "h": 410
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 432,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 878,
+        "y": 46,
+        "w": 445,
+        "h": 380
+      }
+    },
+    {
+      "index": 3,
+      "x": 793,
+      "y": 432,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 1344,
+        "y": 34,
+        "w": 388,
+        "h": 394
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 864,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 12,
+        "y": 482,
+        "w": 473,
+        "h": 375
+      }
+    },
+    {
+      "index": 5,
+      "x": 793,
+      "y": 864,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 441,
+        "y": 463,
+        "w": 445,
+        "h": 399
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1296,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 883,
+        "y": 494,
+        "w": 453,
+        "h": 372
+      }
+    },
+    {
+      "index": 7,
+      "x": 793,
+      "y": 1296,
+      "w": 793,
+      "h": 432,
+      "sourceRect": {
+        "x": 1338,
+        "y": 483,
+        "w": 413,
+        "h": 384
+      }
+    }
+  ]
+}

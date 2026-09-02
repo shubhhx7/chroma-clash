@@ -1,0 +1,16 @@
+{
+  "id": "chroma-burst-vfx:chroma_ring",
+  "source": "Assets/vfx/kairo/06_kairo_chroma_burst_special_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/kairo/chroma_ring.png",
+  "kind": "still",
+  "width": 434,
+  "height": 369,
+  "sourceRect": {
+    "x": 666,
+    "y": 296,
+    "w": 434,
+    "h": 369,
+    "band": -1,
+    "index": -1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "upgrade-ui:icon_speed",
+  "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",
+  "processedPath": "assets_processed/ui/upgrades/icon_speed.png",
+  "kind": "still",
+  "width": 139,
+  "height": 162,
+  "sourceRect": {
+    "x": 258,
+    "y": 886,
+    "w": 139,
+    "h": 162,
+    "band": -1,
+    "index": -1
+  }
+}

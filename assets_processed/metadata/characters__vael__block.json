@@ -1,0 +1,71 @@
+{
+  "id": "hd2-vael-block",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_block_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/block.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 496,
+  "frameHeight": 482,
+  "frameCount": 4,
+  "fps": 9,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 496,
+      "h": 482,
+      "sourceRect": {
+        "x": 142,
+        "y": 86,
+        "w": 410,
+        "h": 480
+      }
+    },
+    {
+      "index": 1,
+      "x": 496,
+      "y": 0,
+      "w": 496,
+      "h": 482,
+      "sourceRect": {
+        "x": 691,
+        "y": 86,
+        "w": 458,
+        "h": 480
+      }
+    },
+    {
+      "index": 2,
+      "x": 992,
+      "y": 0,
+      "w": 496,
+      "h": 482,
+      "sourceRect": {
+        "x": 117,
+        "y": 672,
+        "w": 453,
+        "h": 455
+      }
+    },
+    {
+      "index": 3,
+      "x": 1488,
+      "y": 0,
+      "w": 496,
+      "h": 482,
+      "sourceRect": {
+        "x": 702,
+        "y": 648,
+        "w": 410,
+        "h": 482
+      }
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "id": "hd-guardian-block",
+  "source": "Assets/sprites/guardian/21_guardian_block_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/block.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 548,
+  "frameHeight": 482,
+  "frameCount": 6,
+  "fps": 10,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 548,
+      "h": 482,
+      "sourceRect": {
+        "x": 75,
+        "y": 73,
+        "w": 391,
+        "h": 377
+      }
+    },
+    {
+      "index": 1,
+      "x": 548,
+      "y": 0,
+      "w": 548,
+      "h": 482,
+      "sourceRect": {
+        "x": 576,
+        "y": 75,
+        "w": 368,
+        "h": 375
+      }
+    },
+    {
+      "index": 2,
+      "x": 1096,
+      "y": 0,
+      "w": 548,
+      "h": 482,
+      "sourceRect": {
+        "x": 1120,
+        "y": 73,
+        "w": 314,
+        "h": 374
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 482,
+      "w": 548,
+      "h": 482,
+      "sourceRect": {
+        "x": 78,
+        "y": 583,
+        "w": 349,
+        "h": 346
+      }
+    },
+    {
+      "index": 4,
+      "x": 548,
+      "y": 482,
+      "w": 548,
+      "h": 482,
+      "sourceRect": {
+        "x": 567,
+        "y": 584,
+        "w": 356,
+        "h": 345
+      }
+    },
+    {
+      "index": 5,
+      "x": 1096,
+      "y": 482,
+      "w": 548,
+      "h": 482,
+      "sourceRect": {
+        "x": 1084,
+        "y": 586,
+        "w": 355,
+        "h": 343
+      }
+    }
+  ]
+}

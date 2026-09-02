@@ -1,0 +1,16 @@
+{
+  "id": "block-button:block_default",
+  "source": "Assets/ui/controls/04_movement_control_sheet.png",
+  "processedPath": "assets_processed/ui/controls/block_default.png",
+  "kind": "still",
+  "width": 357,
+  "height": 350,
+  "sourceRect": {
+    "x": 39,
+    "y": 50,
+    "w": 357,
+    "h": 350,
+    "band": 0,
+    "index": 0
+  }
+}

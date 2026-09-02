@@ -1,0 +1,11 @@
+{
+  "name": "Chroma Clash",
+  "short_name": "Chroma Clash",
+  "description": "A premium 2D chroma-powered fighting game.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "orientation": "landscape",
+  "background_color": "#060912",
+  "theme_color": "#060912"
+}

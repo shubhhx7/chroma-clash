@@ -1,0 +1,97 @@
+{
+  "id": "hd-raider-hit",
+  "source": "Assets/sprites/raider/13_raider_hit_reaction_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/hit.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 689,
+  "frameHeight": 462,
+  "frameCount": 6,
+  "fps": 12,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 689,
+      "h": 462,
+      "sourceRect": {
+        "x": 14,
+        "y": 33,
+        "w": 493,
+        "h": 442
+      }
+    },
+    {
+      "index": 1,
+      "x": 689,
+      "y": 0,
+      "w": 689,
+      "h": 462,
+      "sourceRect": {
+        "x": 536,
+        "y": 36,
+        "w": 469,
+        "h": 442
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 462,
+      "w": 689,
+      "h": 462,
+      "sourceRect": {
+        "x": 1060,
+        "y": 34,
+        "w": 441,
+        "h": 444
+      }
+    },
+    {
+      "index": 3,
+      "x": 689,
+      "y": 462,
+      "w": 689,
+      "h": 462,
+      "sourceRect": {
+        "x": 12,
+        "y": 513,
+        "w": 515,
+        "h": 474
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 924,
+      "w": 689,
+      "h": 462,
+      "sourceRect": {
+        "x": 549,
+        "y": 563,
+        "w": 471,
+        "h": 425
+      }
+    },
+    {
+      "index": 5,
+      "x": 689,
+      "y": 924,
+      "w": 689,
+      "h": 462,
+      "sourceRect": {
+        "x": 1025,
+        "y": 544,
+        "w": 492,
+        "h": 444
+      }
+    }
+  ]
+}

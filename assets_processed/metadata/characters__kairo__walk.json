@@ -1,0 +1,123 @@
+{
+  "id": "hd-kairo-walk",
+  "source": "Assets/sprites/kairo/02_kairo_walk_forward_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/walk.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 315,
+  "frameHeight": 389,
+  "frameCount": 8,
+  "fps": 10,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 102,
+        "y": 51,
+        "w": 274,
+        "h": 437
+      }
+    },
+    {
+      "index": 1,
+      "x": 315,
+      "y": 0,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 453,
+        "y": 51,
+        "w": 266,
+        "h": 441
+      }
+    },
+    {
+      "index": 2,
+      "x": 630,
+      "y": 0,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 793,
+        "y": 52,
+        "w": 262,
+        "h": 440
+      }
+    },
+    {
+      "index": 3,
+      "x": 945,
+      "y": 0,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 1144,
+        "y": 50,
+        "w": 264,
+        "h": 442
+      }
+    },
+    {
+      "index": 4,
+      "x": 1260,
+      "y": 0,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 1460,
+        "y": 53,
+        "w": 272,
+        "h": 439
+      }
+    },
+    {
+      "index": 5,
+      "x": 1575,
+      "y": 0,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 1799,
+        "y": 51,
+        "w": 265,
+        "h": 441
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 389,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 2143,
+        "y": 51,
+        "w": 264,
+        "h": 442
+      }
+    },
+    {
+      "index": 7,
+      "x": 315,
+      "y": 389,
+      "w": 315,
+      "h": 389,
+      "sourceRect": {
+        "x": 2490,
+        "y": 51,
+        "w": 268,
+        "h": 440
+      }
+    }
+  ]
+}

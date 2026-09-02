@@ -1,0 +1,123 @@
+{
+  "id": "hd-kairo-idle",
+  "source": "Assets/sprites/kairo/01_kairo_idle_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/idle.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 282,
+  "frameHeight": 388,
+  "frameCount": 8,
+  "fps": 8,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 35,
+        "y": 158,
+        "w": 258,
+        "h": 403
+      }
+    },
+    {
+      "index": 1,
+      "x": 282,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 299,
+        "y": 158,
+        "w": 254,
+        "h": 403
+      }
+    },
+    {
+      "index": 2,
+      "x": 564,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 566,
+        "y": 157,
+        "w": 246,
+        "h": 404
+      }
+    },
+    {
+      "index": 3,
+      "x": 846,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 823,
+        "y": 158,
+        "w": 242,
+        "h": 403
+      }
+    },
+    {
+      "index": 4,
+      "x": 1128,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 1079,
+        "y": 157,
+        "w": 248,
+        "h": 404
+      }
+    },
+    {
+      "index": 5,
+      "x": 1410,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 1342,
+        "y": 157,
+        "w": 244,
+        "h": 404
+      }
+    },
+    {
+      "index": 6,
+      "x": 1692,
+      "y": 0,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 1600,
+        "y": 158,
+        "w": 245,
+        "h": 403
+      }
+    },
+    {
+      "index": 7,
+      "x": 0,
+      "y": 388,
+      "w": 282,
+      "h": 388,
+      "sourceRect": {
+        "x": 1859,
+        "y": 157,
+        "w": 247,
+        "h": 404
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "combo-badges:combo_x10",
+  "source": "Assets/ui/hud/combo_badge_design_grid.png",
+  "processedPath": "assets_processed/ui/hud/combo/combo_x10.png",
+  "kind": "still",
+  "width": 654,
+  "height": 223,
+  "sourceRect": {
+    "x": 749,
+    "y": 587,
+    "w": 654,
+    "h": 226,
+    "band": 2,
+    "index": 1
+  }
+}

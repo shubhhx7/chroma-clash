@@ -1,0 +1,123 @@
+{
+  "id": "hd-raider-attack1",
+  "source": "Assets/sprites/raider/09_raider_attack_01_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/attack.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 828,
+  "frameHeight": 439,
+  "frameCount": 8,
+  "fps": 12,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 10,
+        "y": 42,
+        "w": 429,
+        "h": 396
+      }
+    },
+    {
+      "index": 1,
+      "x": 828,
+      "y": 0,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 561,
+        "y": 80,
+        "w": 324,
+        "h": 359
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 439,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 961,
+        "y": 19,
+        "w": 348,
+        "h": 424
+      }
+    },
+    {
+      "index": 3,
+      "x": 828,
+      "y": 439,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 1234,
+        "y": 114,
+        "w": 535,
+        "h": 326
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 878,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 4,
+        "y": 517,
+        "w": 563,
+        "h": 352
+      }
+    },
+    {
+      "index": 5,
+      "x": 828,
+      "y": 878,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 529,
+        "y": 490,
+        "w": 415,
+        "h": 380
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1317,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 927,
+        "y": 485,
+        "w": 437,
+        "h": 385
+      }
+    },
+    {
+      "index": 7,
+      "x": 828,
+      "y": 1317,
+      "w": 828,
+      "h": 439,
+      "sourceRect": {
+        "x": 1339,
+        "y": 476,
+        "w": 429,
+        "h": 394
+      }
+    }
+  ]
+}

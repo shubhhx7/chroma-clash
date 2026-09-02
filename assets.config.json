@@ -1,0 +1,2096 @@
+{
+  "$comment": "Chroma Clash asset processing config. Sources are read-only; outputs go to assets_processed/. Types: green-sheet (chroma key removal + projection segmentation) and alpha-sheet (already transparent; cell grid or blob segmentation). Picks were verified against scan output and the Asset Gallery.",
+  "entries": [
+    {
+      "id": "health-bar",
+      "source": "Assets/ui/hud/futuristic_health_bar_ui_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 200,
+      "minH": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud/health_bar",
+        "pick": [
+          {
+            "band": 0,
+            "widest": true,
+            "name": "frame_empty"
+          },
+          {
+            "band": 1,
+            "widest": true,
+            "name": "fill_full"
+          },
+          {
+            "band": 7,
+            "widest": true,
+            "name": "frame_warning"
+          }
+        ]
+      }
+    },
+    {
+      "id": "arena-far-background",
+      "source": "Assets/arena/prismfall_courtyard/far_background/02_arena_far_background_layer_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 250,
+      "minH": 70,
+      "output": {
+        "kind": "stills",
+        "dir": "arena/prismfall",
+        "pick": [
+          {
+            "band": 0,
+            "widest": true,
+            "name": "far_sky",
+            "fadeTop": 0,
+            "fadeSides": 0
+          },
+          {
+            "band": 1,
+            "widest": true,
+            "name": "floating_islands"
+          },
+          {
+            "band": 2,
+            "widest": true,
+            "name": "distant_mountains"
+          },
+          {
+            "band": 3,
+            "widest": true,
+            "name": "far_ruins"
+          },
+          {
+            "band": 4,
+            "widest": true,
+            "name": "depth_haze"
+          }
+        ]
+      },
+      "region": [
+        0.07,
+        0.105,
+        0.86,
+        0.79
+      ],
+      "fadeTop": 0.3,
+      "fadeSides": 0.08
+    },
+    {
+      "id": "arena-midground",
+      "source": "Assets/arena/prismfall_courtyard/midground/03_arena_midground_architecture_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 40,
+      "minH": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "arena/prismfall",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "arch_broken"
+          },
+          {
+            "band": 0,
+            "index": 1,
+            "name": "arch_full"
+          },
+          {
+            "band": 1,
+            "index": 1,
+            "name": "column_a"
+          },
+          {
+            "band": 1,
+            "index": 3,
+            "name": "column_b"
+          },
+          {
+            "band": 2,
+            "index": 1,
+            "name": "wall_section"
+          }
+        ]
+      },
+      "region": [
+        0.09,
+        0.105,
+        0.88,
+        0.86
+      ],
+      "trimFloatingTop": true
+    },
+    {
+      "id": "arena-floor",
+      "source": "Assets/arena/prismfall_courtyard/floor/04_arena_combat_floor_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 60,
+      "minH": 40,
+      "output": {
+        "kind": "stills",
+        "dir": "arena/prismfall",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "floor_tile_a"
+          },
+          {
+            "band": 0,
+            "index": 1,
+            "name": "floor_tile_b"
+          }
+        ]
+      },
+      "bandsY": [
+        [
+          0.39,
+          0.535
+        ]
+      ],
+      "maxSegW": 140,
+      "splitEven": 5,
+      "trimFloatingTop": true
+    },
+    {
+      "id": "arena-atmosphere",
+      "source": "Assets/arena/prismfall_courtyard/atmosphere/07_arena_atmospheric_overlay_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 12,
+      "minH": 12,
+      "output": {
+        "kind": "stills",
+        "dir": "arena/prismfall",
+        "pick": [
+          {
+            "band": 4,
+            "widest": true,
+            "name": "ground_mist"
+          }
+        ]
+      },
+      "region": [
+        0.09,
+        0.1,
+        0.88,
+        0.82
+      ],
+      "despillStrong": true
+    },
+    {
+      "id": "attack-button",
+      "source": "Assets/ui/controls/01_attack_button_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "output": {
+        "kind": "stills",
+        "dir": "ui/controls",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "attack_default",
+            "squareTop": true
+          },
+          {
+            "band": 0,
+            "index": 2,
+            "name": "attack_pressed",
+            "squareTop": true
+          }
+        ]
+      },
+      "minAlpha": 90
+    },
+    {
+      "id": "block-button",
+      "source": "Assets/ui/controls/04_movement_control_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "output": {
+        "kind": "stills",
+        "dir": "ui/controls",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "block_default",
+            "squareTop": true
+          },
+          {
+            "band": 0,
+            "index": 2,
+            "name": "block_pressed",
+            "squareTop": true
+          }
+        ]
+      },
+      "minAlpha": 90
+    },
+    {
+      "id": "pause-button",
+      "source": "Assets/ui/controls/03_special_ability_button_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "output": {
+        "kind": "stills",
+        "dir": "ui/controls",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "pause_default",
+            "squareTop": true
+          },
+          {
+            "band": 0,
+            "index": 1,
+            "name": "pause_pressed",
+            "squareTop": true
+          }
+        ]
+      },
+      "minAlpha": 90
+    },
+    {
+      "id": "movement-arrows",
+      "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "output": {
+        "kind": "stills",
+        "dir": "ui/controls",
+        "pick": [
+          {
+            "band": 1,
+            "index": 0,
+            "name": "move_left_default",
+            "squareTop": true
+          },
+          {
+            "band": 1,
+            "index": 1,
+            "name": "move_left_pressed",
+            "squareTop": true
+          },
+          {
+            "band": 1,
+            "index": 2,
+            "name": "move_right_default",
+            "squareTop": true
+          },
+          {
+            "band": 1,
+            "index": 3,
+            "name": "move_right_pressed",
+            "squareTop": true
+          }
+        ]
+      },
+      "minAlpha": 90
+    },
+    {
+      "id": "fight-overlays",
+      "source": "Assets/ui/results/08_score_rank_hud_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 2,
+        "rows": 4
+      },
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud",
+        "pick": [
+          {
+            "band": 1,
+            "index": 1,
+            "name": "overlay_final_fight"
+          }
+        ]
+      },
+      "keepMainBlob": true,
+      "fadeSides": 0.03
+    },
+    {
+      "id": "hit-vfx",
+      "source": "Assets/vfx/shared_combat/06_hit_block_ko_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minW": 18,
+      "minH": 18,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/shared",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "hit_spark_blue"
+          },
+          {
+            "band": 0,
+            "index": 1,
+            "name": "hit_spark_red"
+          },
+          {
+            "band": 1,
+            "index": 0,
+            "name": "block_shield"
+          },
+          {
+            "band": 4,
+            "index": 1,
+            "name": "ko_burst"
+          }
+        ]
+      },
+      "minAlpha": 24,
+      "cellGrid": {
+        "cols": 4,
+        "rows": 5
+      },
+      "stripWhiteHaze": true,
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "raider-slash-vfx",
+      "source": "Assets/vfx/raider/01_raider_slash_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minW": 30,
+      "minH": 20,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/raider",
+        "pick": [
+          {
+            "band": 2,
+            "index": 0,
+            "name": "slash_arc"
+          }
+        ]
+      },
+      "minAlpha": 24,
+      "cellGrid": {
+        "cols": 2,
+        "rows": 4
+      },
+      "stripWhiteHaze": true,
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "energy-bar",
+      "source": "Assets/ui/hud/neon_sci_fi_energy_bar_reference_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 250,
+      "minH": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud/energy_bar",
+        "pick": [
+          {
+            "band": 1,
+            "index": 1,
+            "name": "frame_empty"
+          },
+          {
+            "band": 5,
+            "index": 1,
+            "name": "fill_full"
+          }
+        ]
+      }
+    },
+    {
+      "id": "logo",
+      "source": "Assets/branding/logo/01_game_logo_title_lockup_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "output": {
+        "kind": "stills",
+        "dir": "branding",
+        "pick": [
+          {
+            "band": 0,
+            "index": 1,
+            "name": "logo_stacked",
+            "trimTopFrac": 0.07,
+            "trimBottomFrac": 0.08,
+            "trimLeftFrac": 0.03
+          },
+          {
+            "band": 1,
+            "index": 3,
+            "name": "logo_badge"
+          }
+        ]
+      }
+    },
+    {
+      "id": "heavy-button",
+      "source": "Assets/ui/controls/01_attack_button_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "minAlpha": 90,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/controls",
+        "pick": [
+          {
+            "band": 1,
+            "index": 1,
+            "name": "heavy_default",
+            "squareTop": true
+          },
+          {
+            "band": 1,
+            "index": 0,
+            "name": "heavy_pressed",
+            "squareTop": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "special-button",
+      "source": "Assets/ui/controls/05_pause_settings_control_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "minAlpha": 90,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/controls",
+        "pick": [
+          {
+            "band": 1,
+            "index": 0,
+            "name": "special_ready",
+            "squareTop": true
+          },
+          {
+            "band": 0,
+            "index": 0,
+            "name": "special_disabled",
+            "squareTop": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "arena-floor-strip",
+      "source": "Assets/arena/prismfall_courtyard/floor/04_arena_combat_floor_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 80,
+      "minW": 300,
+      "minH": 40,
+      "bandsY": [
+        [
+          0.39,
+          0.535
+        ]
+      ],
+      "trimFloatingTop": true,
+      "output": {
+        "kind": "stills",
+        "dir": "arena/prismfall",
+        "pick": [
+          {
+            "band": 0,
+            "widest": true,
+            "name": "floor_strip"
+          }
+        ]
+      }
+    },
+    {
+      "id": "weapon-icons",
+      "source": "Assets/weapons/kairo/icons/05_kairo_weapon_selection_icon_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "minAlpha": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/weapons",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "blade"
+          },
+          {
+            "band": 0,
+            "index": 1,
+            "name": "blade_selected"
+          },
+          {
+            "band": 0,
+            "index": 2,
+            "name": "axe"
+          },
+          {
+            "band": 0,
+            "index": 3,
+            "name": "axe_selected"
+          },
+          {
+            "band": 1,
+            "index": 0,
+            "name": "dual"
+          },
+          {
+            "band": 1,
+            "index": 1,
+            "name": "dual_selected"
+          },
+          {
+            "band": 1,
+            "index": 2,
+            "name": "locked"
+          }
+        ]
+      }
+    },
+    {
+      "id": "upgrade-ui",
+      "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",
+      "type": "alpha-sheet",
+      "gapRows": 6,
+      "gapCols": 6,
+      "minW": 30,
+      "minH": 30,
+      "minAlpha": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/upgrades",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0.01,
+              0.004,
+              0.268,
+              0.528
+            ],
+            "name": "card_default"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.292,
+              0,
+              0.342,
+              0.548
+            ],
+            "name": "card_selected"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.638,
+              0.014,
+              0.252,
+              0.516
+            ],
+            "name": "card_locked"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.052,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_damage"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.174,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_speed"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.308,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_combo"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.439,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_energy"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.567,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_special"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.705,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_guard"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.84,
+              0.8,
+              0.1,
+              0.165
+            ],
+            "name": "icon_health"
+          }
+        ]
+      }
+    },
+    {
+      "id": "vael-vfx",
+      "source": "Assets/vfx/vael/04_vael_special_attack_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 2,
+        "rows": 3
+      },
+      "minAlpha": 24,
+      "stripWhiteHaze": true,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/vael",
+        "pick": [
+          {
+            "band": 2,
+            "index": 0,
+            "name": "rift_ring"
+          },
+          {
+            "band": 2,
+            "index": 1,
+            "name": "rift_burst"
+          }
+        ]
+      },
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "guardian-vfx",
+      "source": "Assets/vfx/guardian/02_guardian_hammer_impact_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 2,
+        "rows": 3
+      },
+      "minAlpha": 24,
+      "stripWhiteHaze": true,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/guardian",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "hammer_impact"
+          }
+        ]
+      },
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "boss-nameplate",
+      "source": "Assets/ui/hud/07_boss_health_nameplate_sheet.png",
+      "type": "alpha-sheet",
+      "cellGrid": {
+        "cols": 2,
+        "rows": 4
+      },
+      "minAlpha": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud",
+        "pick": [
+          {
+            "band": 0,
+            "index": 0,
+            "name": "vael_nameplate",
+            "trimBottomFrac": 0.14
+          }
+        ]
+      }
+    },
+    {
+      "id": "hd-guardian-idle",
+      "source": "Assets/sprites/guardian/16_guardian_idle_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/idle",
+        "fps": 8,
+        "loop": true,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 353,
+      "charTargetPx": 482,
+      "cellConnect": true
+    },
+    {
+      "id": "hd-guardian-walk",
+      "source": "Assets/sprites/guardian/17_guardian_walk_forward_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/walk",
+        "fps": 8,
+        "loop": true,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 325,
+      "charTargetPx": 482,
+      "cellConnect": true
+    },
+    {
+      "id": "hd-guardian-run",
+      "source": "Assets/sprites/guardian/18_guardian_run_charge_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/run",
+        "fps": 10,
+        "loop": true,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 335,
+      "charTargetPx": 482,
+      "cellConnect": true
+    },
+    {
+      "id": "hd-guardian-attack1",
+      "source": "Assets/sprites/guardian/19_guardian_attack_01_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/attack",
+        "fps": 11,
+        "loop": false,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 345,
+      "charTargetPx": 482,
+      "cellConnect": true
+    },
+    {
+      "id": "hd-guardian-attack2",
+      "source": "Assets/sprites/guardian/20_guardian_attack_02_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/attack2",
+        "fps": 11,
+        "loop": false,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 345,
+      "charTargetPx": 482,
+      "cellConnect": true
+    },
+    {
+      "id": "hd-guardian-block",
+      "source": "Assets/sprites/guardian/21_guardian_block_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/block",
+        "fps": 10,
+        "loop": true,
+        "expect": 6
+      },
+      "cellGrid": {
+        "cols": 3,
+        "rows": 2
+      },
+      "charHeightPx": 380,
+      "charTargetPx": 482,
+      "cellConnect": true
+    },
+    {
+      "id": "hd-guardian-hit",
+      "source": "Assets/sprites/guardian/22_guardian_hit_reaction_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/hit",
+        "fps": 12,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 385,
+      "charTargetPx": 482,
+      "bandsY": [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          1
+        ]
+      ],
+      "gapCols": 5
+    },
+    {
+      "id": "hd-guardian-knockdown",
+      "source": "Assets/sprites/guardian/23_guardian_knockdown_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/knockdown",
+        "fps": 9,
+        "loop": false,
+        "expect": 7
+      },
+      "charHeightPx": 353,
+      "charTargetPx": 482,
+      "bandsY": [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          1
+        ]
+      ],
+      "gapCols": 5
+    },
+    {
+      "id": "hd-guardian-defeat",
+      "source": "Assets/sprites/guardian/24_guardian_defeat_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/guardian/defeat",
+        "fps": 9,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 360,
+      "charTargetPx": 482,
+      "bandsY": [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          1
+        ]
+      ],
+      "gapCols": 5
+    },
+    {
+      "id": "hd-raider-idle",
+      "source": "Assets/sprites/raider/06_raider_idle_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/idle",
+        "fps": 8,
+        "loop": true,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 419,
+      "charTargetPx": 430,
+      "cellConnect": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-walk",
+      "source": "Assets/sprites/raider/07_raider_walk_forward_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/walk",
+        "fps": 10,
+        "loop": true,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 419,
+      "charTargetPx": 430,
+      "cellConnect": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-run",
+      "source": "Assets/sprites/raider/08_raider_run_chase_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/run",
+        "fps": 12,
+        "loop": true,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 412,
+      "charTargetPx": 430,
+      "cellConnect": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-attack1",
+      "source": "Assets/sprites/raider/09_raider_attack_01_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/attack",
+        "fps": 12,
+        "loop": false,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 419,
+      "charTargetPx": 430,
+      "cellConnect": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-attack2",
+      "source": "Assets/sprites/raider/10_raider_attack_02_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/attack2",
+        "fps": 12,
+        "loop": false,
+        "expect": 8
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "charHeightPx": 419,
+      "charTargetPx": 430,
+      "cellConnect": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-block",
+      "source": "Assets/sprites/raider/11_raider_block_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/block",
+        "fps": 10,
+        "loop": true,
+        "expect": 4
+      },
+      "cellGrid": {
+        "cols": 4,
+        "rows": 1
+      },
+      "charHeightPx": 620,
+      "charTargetPx": 430,
+      "alphaShave": 36,
+      "cellConnect": true,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-dodge",
+      "source": "Assets/sprites/raider/12_raider_dodge_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/dodge",
+        "fps": 14,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 440,
+      "charTargetPx": 430,
+      "bandsY": [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          1
+        ]
+      ],
+      "gapCols": 6,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-hit",
+      "source": "Assets/sprites/raider/13_raider_hit_reaction_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/hit",
+        "fps": 12,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 445,
+      "charTargetPx": 430,
+      "gapCols": 4,
+      "gapRows": 4,
+      "maxSegW": 530,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-knockdown",
+      "source": "Assets/sprites/raider/14_raider_knockdown_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/knockdown",
+        "fps": 9,
+        "loop": false,
+        "expect": 8
+      },
+      "charHeightPx": 419,
+      "charTargetPx": 430,
+      "bandsY": [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          1
+        ]
+      ],
+      "gapCols": 6,
+      "maxSegW": 480,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-raider-defeat",
+      "source": "Assets/sprites/raider/15_raider_defeat_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "output": {
+        "kind": "animation",
+        "name": "characters/raider/defeat",
+        "fps": 9,
+        "loop": false,
+        "expect": 8
+      },
+      "charHeightPx": 419,
+      "charTargetPx": 430,
+      "bandsY": [
+        [
+          0,
+          0.5
+        ],
+        [
+          0.5,
+          1
+        ]
+      ],
+      "gapCols": 6,
+      "maxSegW": 470,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-kairo-walk",
+      "source": "Assets/sprites/kairo/02_kairo_walk_forward_hd_sheet.png",
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/walk",
+        "fps": 10,
+        "loop": true,
+        "expect": 8
+      },
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "despillStrong": true,
+      "cleanFrames": true,
+      "minW": 50,
+      "minH": 50,
+      "cellGrid": {
+        "cols": 8,
+        "rows": 1
+      },
+      "cellConnect": true,
+      "charHeightPx": 436
+    },
+    {
+      "id": "hd-kairo-walkback",
+      "source": "Assets/sprites/kairo/03_kairo_walk_backward_hd_sheet.png",
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/walkback",
+        "fps": 10,
+        "loop": true,
+        "expect": 8
+      },
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "despillStrong": true,
+      "cleanFrames": true,
+      "minW": 50,
+      "minH": 50,
+      "cellGrid": {
+        "cols": 8,
+        "rows": 1
+      },
+      "cellConnect": true,
+      "charHeightPx": 436
+    },
+    {
+      "id": "hd-kairo-run",
+      "source": "Assets/sprites/kairo/04_kairo_run_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "cellGrid": {
+        "cols": 4,
+        "rows": 2
+      },
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/run",
+        "fps": 12,
+        "loop": true,
+        "expect": 8
+      },
+      "charHeightPx": 404,
+      "cellConnect": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-kairo-dash",
+      "source": "Assets/sprites/kairo/05_kairo_dash_forward_hd_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "minW": 60,
+      "minH": 60,
+      "cellGrid": {
+        "cols": 3,
+        "rows": 2
+      },
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/dash",
+        "fps": 14,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 395,
+      "cellConnect": true,
+      "stripDarkHaze": true,
+      "alphaShave": 36,
+      "cleanFrames": true
+    },
+    {
+      "id": "hd-kairo-light1",
+      "source": "Assets/sprites/kairo/kairo_attack_02_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/attack1",
+        "fps": 14,
+        "loop": false,
+        "expect": 4
+      },
+      "gapCols": 2,
+      "maxSegW": 500,
+      "dropFrames": [
+        4,
+        5,
+        6
+      ],
+      "charHeightPx": 368,
+      "cleanIsolated": 12
+    },
+    {
+      "id": "hd-kairo-light2",
+      "source": "Assets/sprites/kairo/kairo_attack_02_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/attack2",
+        "fps": 14,
+        "loop": false,
+        "expect": 3
+      },
+      "gapCols": 2,
+      "maxSegW": 500,
+      "dropFrames": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "charHeightPx": 313,
+      "cleanIsolated": 12
+    },
+    {
+      "id": "hd-kairo-block",
+      "source": "Assets/sprites/kairo/kairo_block_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/block",
+        "fps": 10,
+        "loop": true,
+        "expect": 4
+      },
+      "charHeightPx": 517
+    },
+    {
+      "id": "hd-kairo-hit",
+      "source": "Assets/sprites/kairo/kairo_hit_reaction_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/hit",
+        "fps": 12,
+        "loop": false,
+        "expect": 4
+      },
+      "charHeightPx": 545
+    },
+    {
+      "id": "hd-kairo-knockdown",
+      "source": "Assets/sprites/kairo/kairo_knockdown_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/knockdown",
+        "fps": 9,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 395
+    },
+    {
+      "id": "hd-kairo-getup",
+      "source": "Assets/sprites/kairo/kairo_get_up_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/getup",
+        "fps": 10,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 420
+    },
+    {
+      "id": "hd2-vael-idle",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_idle_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/idle",
+        "fps": 7,
+        "loop": true,
+        "expect": 8
+      },
+      "charHeightPx": 323,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-walk",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_walk_forward_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/walk",
+        "fps": 10,
+        "loop": true,
+        "expect": 8
+      },
+      "charHeightPx": 323,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-run",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_run_chase_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/run",
+        "fps": 12,
+        "loop": true,
+        "expect": 8
+      },
+      "charHeightPx": 323,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-attack1",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_attack_01_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/attack",
+        "fps": 12,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 350,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-attack2",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_attack_02_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/attack2",
+        "fps": 12,
+        "loop": false,
+        "expect": 7
+      },
+      "gapCols": 2,
+      "maxSegW": 500,
+      "charHeightPx": 323,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-block",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_block_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/block",
+        "fps": 9,
+        "loop": true,
+        "expect": 4
+      },
+      "charHeightPx": 460,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-dodge",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_dodge_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/dodge",
+        "fps": 13,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 350,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-hit",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_hit_reaction_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/hit",
+        "fps": 12,
+        "loop": false,
+        "expect": 4
+      },
+      "charHeightPx": 425,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-knockdown",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_knockdown_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/knockdown",
+        "fps": 9,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 350,
+      "charTargetPx": 456
+    },
+    {
+      "id": "hd2-vael-defeat",
+      "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_defeat_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/vael/defeat",
+        "fps": 9,
+        "loop": false,
+        "expect": 6
+      },
+      "charHeightPx": 350,
+      "charTargetPx": 456
+    },
+    {
+      "id": "main-logo",
+      "source": "Assets/branding/logo/main logo.png",
+      "type": "alpha-sheet",
+      "blackKey": true,
+      "minAlpha": 24,
+      "output": {
+        "kind": "stills",
+        "dir": "branding",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "name": "main_logo"
+          }
+        ]
+      }
+    },
+    {
+      "id": "overlay-ready-hd",
+      "source": "Assets/ui/menus/ready.png",
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "name": "overlay_ready"
+          }
+        ]
+      },
+      "type": "passthrough"
+    },
+    {
+      "id": "overlay-fight-hd",
+      "source": "Assets/ui/menus/fight.png",
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "name": "overlay_fight"
+          }
+        ]
+      },
+      "type": "passthrough"
+    },
+    {
+      "id": "overlay-ko-hd",
+      "source": "Assets/ui/menus/ko.png",
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "name": "overlay_ko"
+          }
+        ]
+      },
+      "type": "passthrough"
+    },
+    {
+      "id": "tutorial-page",
+      "source": "Assets/ui/tutorial/tutorial.png",
+      "type": "alpha-sheet",
+      "minAlpha": 0,
+      "output": {
+        "kind": "stills",
+        "dir": "ui",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0,
+              0,
+              1,
+              1
+            ],
+            "name": "tutorial_page"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chroma-burst-vfx",
+      "source": "Assets/vfx/kairo/06_kairo_chroma_burst_special_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 40,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/kairo",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0.01,
+              0.22,
+              0.45,
+              0.4
+            ],
+            "name": "chroma_burst_main"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.46,
+              0.26,
+              0.3,
+              0.38
+            ],
+            "name": "chroma_ring"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.77,
+              0.26,
+              0.23,
+              0.34
+            ],
+            "name": "chroma_flash"
+          }
+        ]
+      },
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "boss-aura-vfx",
+      "source": "Assets/vfx/vael/05_boss_aura_phase_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 24,
+      "stripWhiteHaze": true,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/vael",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0.55,
+              0.27,
+              0.43,
+              0.23
+            ],
+            "name": "aura_crest"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.03,
+              0.3,
+              0.47,
+              0.15
+            ],
+            "name": "aura_ring"
+          }
+        ]
+      },
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "boss-defeat-vfx",
+      "source": "Assets/vfx/shared_combat/08_final_victory_boss_defeat_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 24,
+      "stripWhiteHaze": true,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/shared",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0.55,
+              0.02,
+              0.43,
+              0.66
+            ],
+            "name": "boss_defeat_pillar"
+          },
+          {
+            "band": 0,
+            "rect": [
+              0.02,
+              0.66,
+              0.8,
+              0.32
+            ],
+            "name": "boss_defeat_ground"
+          }
+        ]
+      },
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "vael-trail-vfx",
+      "source": "Assets/vfx/vael/03_vael_slash_trail_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 24,
+      "stripWhiteHaze": true,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/vael",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0.02,
+              0.02,
+              0.6,
+              0.22
+            ],
+            "name": "slash_trail"
+          }
+        ]
+      },
+      "whiteKey": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.06,
+      "fadeTop": 0.05
+    },
+    {
+      "id": "dash-dust",
+      "source": "Assets/vfx/movement/01_dash_dust_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "ignoreDarkLines": true,
+      "cellGrid": {
+        "cols": 3,
+        "rows": 2
+      },
+      "minW": 20,
+      "minH": 12,
+      "cleanFrames": true,
+      "output": {
+        "kind": "animation",
+        "name": "vfx/movement/dash_dust",
+        "fps": 18,
+        "loop": false,
+        "expect": 6
+      }
+    },
+    {
+      "id": "landing-dust",
+      "source": "Assets/vfx/movement/03_landing_dust_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "ignoreDarkLines": true,
+      "cellGrid": {
+        "cols": 3,
+        "rows": 2
+      },
+      "minW": 20,
+      "minH": 12,
+      "cleanFrames": true,
+      "output": {
+        "kind": "animation",
+        "name": "vfx/movement/landing_dust",
+        "fps": 18,
+        "loop": false
+      }
+    },
+    {
+      "id": "combo-badges",
+      "source": "Assets/ui/hud/combo_badge_design_grid.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cellGrid": {
+        "cols": 2,
+        "rows": 4
+      },
+      "trimFloatingTop": true,
+      "minW": 100,
+      "minH": 60,
+      "output": {
+        "kind": "stills",
+        "dir": "ui/hud/combo",
+        "pick": [
+          {
+            "band": 0,
+            "index": 1,
+            "name": "combo_x2"
+          },
+          {
+            "band": 1,
+            "index": 0,
+            "name": "combo_x3"
+          },
+          {
+            "band": 1,
+            "index": 1,
+            "name": "combo_x5"
+          },
+          {
+            "band": 2,
+            "index": 1,
+            "name": "combo_x10"
+          },
+          {
+            "band": 3,
+            "index": 0,
+            "name": "combo_x15"
+          },
+          {
+            "band": 3,
+            "index": 1,
+            "name": "combo_x30"
+          }
+        ]
+      },
+      "keepMainBlob": true
+    },
+    {
+      "id": "hd-kairo-heavy",
+      "source": "Assets/sprites/kairo/kairo_attack_02_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/heavy",
+        "fps": 11,
+        "loop": false,
+        "expect": 6
+      },
+      "gapCols": 2,
+      "maxSegW": 500,
+      "dropFrames": [
+        0
+      ],
+      "charHeightPx": 368,
+      "cleanIsolated": 12
+    },
+    {
+      "id": "kairo-heavy-vfx",
+      "source": "Assets/vfx/kairo/07_kairo_weapon_attack_trail_vfx_sheet.png",
+      "type": "alpha-sheet",
+      "minAlpha": 60,
+      "stripDarkHaze": true,
+      "keepMainBlob": true,
+      "fadeSides": 0.04,
+      "fadeTop": 0.04,
+      "output": {
+        "kind": "stills",
+        "dir": "vfx/kairo",
+        "pick": [
+          {
+            "band": 0,
+            "rect": [
+              0.02,
+              0.28,
+              0.48,
+              0.38
+            ],
+            "name": "heavy_arc"
+          }
+        ]
+      }
+    },
+    {
+      "id": "hd-kairo-idle",
+      "source": "Assets/sprites/kairo/01_kairo_idle_hd_sheet.png",
+      "type": "green-sheet",
+      "greenTolerance": 90,
+      "cleanFrames": true,
+      "despillStrong": true,
+      "minW": 50,
+      "minH": 50,
+      "cellGrid": {
+        "cols": 8,
+        "rows": 1
+      },
+      "cellConnect": true,
+      "charHeightPx": 400,
+      "output": {
+        "kind": "animation",
+        "name": "characters/kairo/idle",
+        "fps": 8,
+        "loop": true,
+        "expect": 8
+      }
+    }
+  ]
+}

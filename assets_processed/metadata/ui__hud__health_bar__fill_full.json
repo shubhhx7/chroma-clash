@@ -1,0 +1,16 @@
+{
+  "id": "health-bar:fill_full",
+  "source": "Assets/ui/hud/futuristic_health_bar_ui_sheet.png",
+  "processedPath": "assets_processed/ui/hud/health_bar/fill_full.png",
+  "kind": "still",
+  "width": 1140,
+  "height": 109,
+  "sourceRect": {
+    "x": 251,
+    "y": 166,
+    "w": 1140,
+    "h": 109,
+    "band": 1,
+    "index": 0
+  }
+}

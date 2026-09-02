@@ -1,0 +1,123 @@
+{
+  "id": "hd2-vael-walk",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_walk_forward_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/walk.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 687,
+  "frameHeight": 460,
+  "frameCount": 8,
+  "fps": 10,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 49,
+        "y": 78,
+        "w": 401,
+        "h": 322
+      }
+    },
+    {
+      "index": 1,
+      "x": 687,
+      "y": 0,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 488,
+        "y": 78,
+        "w": 386,
+        "h": 323
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 460,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 907,
+        "y": 78,
+        "w": 392,
+        "h": 323
+      }
+    },
+    {
+      "index": 3,
+      "x": 687,
+      "y": 460,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 1332,
+        "y": 78,
+        "w": 395,
+        "h": 323
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 920,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 36,
+        "y": 512,
+        "w": 402,
+        "h": 318
+      }
+    },
+    {
+      "index": 5,
+      "x": 687,
+      "y": 920,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 478,
+        "y": 512,
+        "w": 393,
+        "h": 318
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1380,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 908,
+        "y": 513,
+        "w": 389,
+        "h": 317
+      }
+    },
+    {
+      "index": 7,
+      "x": 687,
+      "y": 1380,
+      "w": 687,
+      "h": 460,
+      "sourceRect": {
+        "x": 1333,
+        "y": 512,
+        "w": 398,
+        "h": 318
+      }
+    }
+  ]
+}

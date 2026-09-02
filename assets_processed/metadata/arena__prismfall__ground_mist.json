@@ -1,0 +1,16 @@
+{
+  "id": "arena-atmosphere:ground_mist",
+  "source": "Assets/arena/prismfall_courtyard/atmosphere/07_arena_atmospheric_overlay_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/ground_mist.png",
+  "kind": "still",
+  "width": 325,
+  "height": 84,
+  "sourceRect": {
+    "x": 420,
+    "y": 636,
+    "w": 325,
+    "h": 84,
+    "band": 4,
+    "index": 1
+  }
+}

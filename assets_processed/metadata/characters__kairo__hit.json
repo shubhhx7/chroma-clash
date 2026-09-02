@@ -1,0 +1,71 @@
+{
+  "id": "hd-kairo-hit",
+  "source": "Assets/sprites/kairo/kairo_hit_reaction_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/hit.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 445,
+  "frameHeight": 386,
+  "frameCount": 4,
+  "fps": 12,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 445,
+      "h": 386,
+      "sourceRect": {
+        "x": 154,
+        "y": 55,
+        "w": 481,
+        "h": 548
+      }
+    },
+    {
+      "index": 1,
+      "x": 445,
+      "y": 0,
+      "w": 445,
+      "h": 386,
+      "sourceRect": {
+        "x": 671,
+        "y": 39,
+        "w": 418,
+        "h": 529
+      }
+    },
+    {
+      "index": 2,
+      "x": 890,
+      "y": 0,
+      "w": 445,
+      "h": 386,
+      "sourceRect": {
+        "x": 141,
+        "y": 687,
+        "w": 367,
+        "h": 456
+      }
+    },
+    {
+      "index": 3,
+      "x": 1335,
+      "y": 0,
+      "w": 445,
+      "h": 386,
+      "sourceRect": {
+        "x": 694,
+        "y": 698,
+        "w": 378,
+        "h": 470
+      }
+    }
+  ]
+}

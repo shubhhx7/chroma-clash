@@ -1,0 +1,16 @@
+{
+  "id": "arena-far-background:depth_haze",
+  "source": "Assets/arena/prismfall_courtyard/far_background/02_arena_far_background_layer_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/depth_haze.png",
+  "kind": "still",
+  "width": 542,
+  "height": 148,
+  "sourceRect": {
+    "x": 172,
+    "y": 747,
+    "w": 542,
+    "h": 148,
+    "band": 4,
+    "index": 0
+  }
+}

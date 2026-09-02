@@ -1,0 +1,16 @@
+{
+  "id": "guardian-vfx:hammer_impact",
+  "source": "Assets/vfx/guardian/02_guardian_hammer_impact_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/guardian/hammer_impact.png",
+  "kind": "still",
+  "width": 188,
+  "height": 170,
+  "sourceRect": {
+    "x": 2,
+    "y": 0,
+    "w": 188,
+    "h": 170,
+    "band": 0,
+    "index": 0
+  }
+}

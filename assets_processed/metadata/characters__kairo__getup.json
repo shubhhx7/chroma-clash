@@ -1,0 +1,97 @@
+{
+  "id": "hd-kairo-getup",
+  "source": "Assets/sprites/kairo/kairo_get_up_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/getup.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 485,
+  "frameHeight": 386,
+  "frameCount": 6,
+  "fps": 10,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 485,
+      "h": 386,
+      "sourceRect": {
+        "x": 39,
+        "y": 256,
+        "w": 408,
+        "h": 106
+      }
+    },
+    {
+      "index": 1,
+      "x": 485,
+      "y": 0,
+      "w": 485,
+      "h": 386,
+      "sourceRect": {
+        "x": 558,
+        "y": 190,
+        "w": 399,
+        "h": 188
+      }
+    },
+    {
+      "index": 2,
+      "x": 970,
+      "y": 0,
+      "w": 485,
+      "h": 386,
+      "sourceRect": {
+        "x": 1081,
+        "y": 137,
+        "w": 320,
+        "h": 242
+      }
+    },
+    {
+      "index": 3,
+      "x": 1455,
+      "y": 0,
+      "w": 485,
+      "h": 386,
+      "sourceRect": {
+        "x": 74,
+        "y": 573,
+        "w": 318,
+        "h": 278
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 386,
+      "w": 485,
+      "h": 386,
+      "sourceRect": {
+        "x": 570,
+        "y": 504,
+        "w": 265,
+        "h": 356
+      }
+    },
+    {
+      "index": 5,
+      "x": 485,
+      "y": 386,
+      "w": 485,
+      "h": 386,
+      "sourceRect": {
+        "x": 1068,
+        "y": 480,
+        "w": 397,
+        "h": 422
+      }
+    }
+  ]
+}

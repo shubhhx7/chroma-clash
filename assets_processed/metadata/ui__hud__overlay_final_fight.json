@@ -1,0 +1,16 @@
+{
+  "id": "fight-overlays:overlay_final_fight",
+  "source": "Assets/ui/results/08_score_rank_hud_sheet.png",
+  "processedPath": "assets_processed/ui/hud/overlay_final_fight.png",
+  "kind": "still",
+  "width": 762,
+  "height": 248,
+  "sourceRect": {
+    "x": 795,
+    "y": 248,
+    "w": 762,
+    "h": 248,
+    "band": 1,
+    "index": 1
+  }
+}

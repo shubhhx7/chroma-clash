@@ -1,0 +1,16 @@
+{
+  "id": "movement-arrows:move_left_pressed",
+  "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
+  "processedPath": "assets_processed/ui/controls/move_left_pressed.png",
+  "kind": "still",
+  "width": 275,
+  "height": 270,
+  "sourceRect": {
+    "x": 479,
+    "y": 496,
+    "w": 275,
+    "h": 270,
+    "band": 1,
+    "index": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "hit-vfx:ko_burst",
+  "source": "Assets/vfx/shared_combat/06_hit_block_ko_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/shared/ko_burst.png",
+  "kind": "still",
+  "width": 85,
+  "height": 95,
+  "sourceRect": {
+    "x": 105,
+    "y": 408,
+    "w": 85,
+    "h": 95,
+    "band": 4,
+    "index": 1
+  }
+}

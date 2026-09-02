@@ -1,0 +1,71 @@
+{
+  "id": "hd-raider-block",
+  "source": "Assets/sprites/raider/11_raider_block_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/block.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 503,
+  "frameHeight": 485,
+  "frameCount": 4,
+  "fps": 10,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 503,
+      "h": 485,
+      "sourceRect": {
+        "x": 10,
+        "y": 159,
+        "w": 578,
+        "h": 551
+      }
+    },
+    {
+      "index": 1,
+      "x": 503,
+      "y": 0,
+      "w": 503,
+      "h": 485,
+      "sourceRect": {
+        "x": 638,
+        "y": 21,
+        "w": 492,
+        "h": 689
+      }
+    },
+    {
+      "index": 2,
+      "x": 1006,
+      "y": 0,
+      "w": 503,
+      "h": 485,
+      "sourceRect": {
+        "x": 1216,
+        "y": 17,
+        "w": 455,
+        "h": 693
+      }
+    },
+    {
+      "index": 3,
+      "x": 1509,
+      "y": 0,
+      "w": 503,
+      "h": 485,
+      "sourceRect": {
+        "x": 1745,
+        "y": 24,
+        "w": 426,
+        "h": 686
+      }
+    }
+  ]
+}

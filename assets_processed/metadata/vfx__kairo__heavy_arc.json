@@ -1,0 +1,16 @@
+{
+  "id": "kairo-heavy-vfx:heavy_arc",
+  "source": "Assets/vfx/kairo/07_kairo_weapon_attack_trail_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/kairo/heavy_arc.png",
+  "kind": "still",
+  "width": 667,
+  "height": 401,
+  "sourceRect": {
+    "x": 40,
+    "y": 304,
+    "w": 667,
+    "h": 401,
+    "band": -1,
+    "index": -1
+  }
+}

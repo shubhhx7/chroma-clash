@@ -1,0 +1,16 @@
+{
+  "id": "weapon-icons:dual",
+  "source": "Assets/weapons/kairo/icons/05_kairo_weapon_selection_icon_sheet.png",
+  "processedPath": "assets_processed/ui/weapons/dual.png",
+  "kind": "still",
+  "width": 356,
+  "height": 365,
+  "sourceRect": {
+    "x": 6,
+    "y": 574,
+    "w": 356,
+    "h": 365,
+    "band": 1,
+    "index": 0
+  }
+}

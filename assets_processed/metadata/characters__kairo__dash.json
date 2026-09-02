@@ -1,0 +1,97 @@
+{
+  "id": "hd-kairo-dash",
+  "source": "Assets/sprites/kairo/05_kairo_dash_forward_hd_sheet.png",
+  "processedPath": "assets_processed/characters/kairo/dash.png",
+  "kind": "animation",
+  "bakedStandingPx": 380,
+  "frameWidth": 857,
+  "frameHeight": 426,
+  "frameCount": 6,
+  "fps": 14,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 857,
+      "h": 426,
+      "sourceRect": {
+        "x": 23,
+        "y": 97,
+        "w": 499,
+        "h": 377
+      }
+    },
+    {
+      "index": 1,
+      "x": 857,
+      "y": 0,
+      "w": 857,
+      "h": 426,
+      "sourceRect": {
+        "x": 539,
+        "y": 109,
+        "w": 509,
+        "h": 359
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 426,
+      "w": 857,
+      "h": 426,
+      "sourceRect": {
+        "x": 1050,
+        "y": 173,
+        "w": 473,
+        "h": 295
+      }
+    },
+    {
+      "index": 3,
+      "x": 857,
+      "y": 426,
+      "w": 857,
+      "h": 426,
+      "sourceRect": {
+        "x": 80,
+        "y": 594,
+        "w": 484,
+        "h": 354
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 852,
+      "w": 857,
+      "h": 426,
+      "sourceRect": {
+        "x": 559,
+        "y": 591,
+        "w": 493,
+        "h": 368
+      }
+    },
+    {
+      "index": 5,
+      "x": 857,
+      "y": 852,
+      "w": 857,
+      "h": 426,
+      "sourceRect": {
+        "x": 1073,
+        "y": 521,
+        "w": 439,
+        "h": 439
+      }
+    }
+  ]
+}

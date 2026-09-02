@@ -1,0 +1,123 @@
+{
+  "id": "hd-guardian-attack2",
+  "source": "Assets/sprites/guardian/20_guardian_attack_02_hd_sheet.png",
+  "processedPath": "assets_processed/characters/guardian/attack2.png",
+  "kind": "animation",
+  "bakedStandingPx": 482,
+  "frameWidth": 646,
+  "frameHeight": 536,
+  "frameCount": 8,
+  "fps": 11,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 49,
+        "y": 70,
+        "w": 356,
+        "h": 330
+      }
+    },
+    {
+      "index": 1,
+      "x": 646,
+      "y": 0,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 532,
+        "y": 27,
+        "w": 257,
+        "h": 381
+      }
+    },
+    {
+      "index": 2,
+      "x": 1292,
+      "y": 0,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 926,
+        "y": 41,
+        "w": 298,
+        "h": 367
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 536,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 1340,
+        "y": 157,
+        "w": 307,
+        "h": 269
+      }
+    },
+    {
+      "index": 4,
+      "x": 646,
+      "y": 536,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 59,
+        "y": 600,
+        "w": 342,
+        "h": 256
+      }
+    },
+    {
+      "index": 5,
+      "x": 1292,
+      "y": 536,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 486,
+        "y": 583,
+        "w": 324,
+        "h": 267
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1072,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 885,
+        "y": 527,
+        "w": 379,
+        "h": 303
+      }
+    },
+    {
+      "index": 7,
+      "x": 646,
+      "y": 1072,
+      "w": 646,
+      "h": 536,
+      "sourceRect": {
+        "x": 1373,
+        "y": 527,
+        "w": 336,
+        "h": 303
+      }
+    }
+  ]
+}

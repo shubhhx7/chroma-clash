@@ -1,0 +1,16 @@
+{
+  "id": "overlay-ko-hd",
+  "source": "Assets/ui/menus/ko.png",
+  "processedPath": "assets_processed/ui/hud/overlay_ko.png",
+  "kind": "still",
+  "passthrough": true,
+  "sha256": "b4dcd74e836c830aa813b438078de115044e8aacd0d327a4a4a83dddde3386d5",
+  "width": 1254,
+  "height": 1254,
+  "contentRect": {
+    "x": 9,
+    "y": 283,
+    "w": 1235,
+    "h": 642
+  }
+}

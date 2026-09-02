@@ -1,0 +1,16 @@
+{
+  "id": "upgrade-ui:card_default",
+  "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",
+  "processedPath": "assets_processed/ui/upgrades/card_default.png",
+  "kind": "still",
+  "width": 374,
+  "height": 566,
+  "sourceRect": {
+    "x": 28,
+    "y": 10,
+    "w": 374,
+    "h": 566,
+    "band": -1,
+    "index": -1
+  }
+}

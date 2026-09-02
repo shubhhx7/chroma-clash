@@ -1,0 +1,16 @@
+{
+  "id": "hit-vfx:block_shield",
+  "source": "Assets/vfx/shared_combat/06_hit_block_ko_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/shared/block_shield.png",
+  "kind": "still",
+  "width": 92,
+  "height": 102,
+  "sourceRect": {
+    "x": 2,
+    "y": 102,
+    "w": 92,
+    "h": 102,
+    "band": 1,
+    "index": 0
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "chroma-burst-vfx:chroma_burst_main",
+  "source": "Assets/vfx/kairo/06_kairo_chroma_burst_special_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/kairo/chroma_burst_main.png",
+  "kind": "still",
+  "width": 652,
+  "height": 434,
+  "sourceRect": {
+    "x": 14,
+    "y": 239,
+    "w": 652,
+    "h": 434,
+    "band": -1,
+    "index": -1
+  }
+}

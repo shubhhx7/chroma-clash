@@ -1,0 +1,123 @@
+{
+  "id": "hd2-vael-run",
+  "source": "Assets/sprites/vael/_vael_hd_new/CHROMA_CLASH_VAEL_GREENSCREEN_HD_10_SEPARATE/vael_run_chase_hd_sheet.png",
+  "processedPath": "assets_processed/characters/vael/run.png",
+  "kind": "animation",
+  "bakedStandingPx": 456,
+  "frameWidth": 695,
+  "frameHeight": 411,
+  "frameCount": 8,
+  "fps": 12,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 69,
+        "y": 106,
+        "w": 408,
+        "h": 283
+      }
+    },
+    {
+      "index": 1,
+      "x": 695,
+      "y": 0,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 490,
+        "y": 104,
+        "w": 402,
+        "h": 285
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 411,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 904,
+        "y": 102,
+        "w": 411,
+        "h": 287
+      }
+    },
+    {
+      "index": 3,
+      "x": 695,
+      "y": 411,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 1323,
+        "y": 103,
+        "w": 383,
+        "h": 286
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 822,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 72,
+        "y": 499,
+        "w": 401,
+        "h": 287
+      }
+    },
+    {
+      "index": 5,
+      "x": 695,
+      "y": 822,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 517,
+        "y": 498,
+        "w": 373,
+        "h": 288
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 1233,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 932,
+        "y": 501,
+        "w": 384,
+        "h": 285
+      }
+    },
+    {
+      "index": 7,
+      "x": 695,
+      "y": 1233,
+      "w": 695,
+      "h": 411,
+      "sourceRect": {
+        "x": 1341,
+        "y": 497,
+        "w": 360,
+        "h": 288
+      }
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "arena-floor:floor_tile_a",
+  "source": "Assets/arena/prismfall_courtyard/floor/04_arena_combat_floor_sheet.png",
+  "processedPath": "assets_processed/arena/prismfall/floor_tile_a.png",
+  "kind": "still",
+  "width": 134,
+  "height": 131,
+  "sourceRect": {
+    "x": 66,
+    "y": 415,
+    "w": 134,
+    "h": 131,
+    "band": 0,
+    "index": 0
+  }
+}

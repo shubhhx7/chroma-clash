@@ -1,0 +1,165 @@
+/* Application shell: full-viewport fixed stage + orientation gate overlay. */
+
+:root {
+  /* fallback viewport height, kept in sync from visualViewport by ResponsiveGameShell */
+  --app-vh: 100vh;
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+}
+
+/* ---- Mobile viewport reset ----
+ * A phone browser will happily pan/zoom/rubber-band the document while a
+ * finger is on the canvas, which steals the gesture from the game. Locking
+ * the document to the visible viewport keeps every touch inside the canvas.
+ * None of this affects a mouse, so desktop behaviour is unchanged. */
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+  background: #060912;
+}
+
+body {
+  /* the game owns every gesture: no pan, no pinch-zoom, no double-tap zoom */
+  touch-action: none;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#game-container canvas {
+  touch-action: none;
+  /* stop the long-press callout/selection on the canvas */
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+#game-shell {
+  width: 100vw;
+  /* --app-vh (visualViewport-driven) first, then dvh where supported: both
+   * track the *visible* viewport, so browser chrome cannot push UI offscreen */
+  height: var(--app-vh);
+  height: 100dvh;
+  position: fixed;
+  inset: 0;
+  background: #060912;
+  overflow: hidden;
+}
+
+#game-container,
+#game-container canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+/* ---- Orientation gate ---- */
+#orientation-gate {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(ellipse at center, #101b33 0%, #060912 75%);
+  color: #e8f4ff;
+  text-align: center;
+  padding: calc(16px + var(--safe-top)) calc(16px + var(--safe-right)) calc(16px + var(--safe-bottom))
+    calc(16px + var(--safe-left));
+}
+
+#orientation-gate[hidden] {
+  display: none;
+  /* belt and braces: a hidden overlay must never swallow a tap, even if
+   * something later makes it visible-but-transparent */
+  pointer-events: none;
+}
+
+/* Fullscreen CTA on the rotate screen: fullscreen + orientation lock are
+ * gesture-gated by the browser, so the player has to press something. */
+.gate-button {
+  margin-top: 1.25rem;
+  min-height: 48px;
+  min-width: 15rem;
+  padding: 0 1.5rem;
+  font: bold 0.95rem/1 'Segoe UI', system-ui, sans-serif;
+  letter-spacing: 0.18em;
+  color: #9fe8ff;
+  background: #14324a;
+  border: 1.5px solid #6de3ff;
+  border-radius: 8px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.gate-button[hidden] {
+  display: none;
+}
+
+.gate-button:active {
+  background: #1d4562;
+}
+
+.gate-inner {
+  max-width: 28rem;
+}
+
+.gate-icon svg {
+  animation: gate-rock 2.4s ease-in-out infinite;
+}
+
+@keyframes gate-rock {
+  0%,
+  100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(90deg);
+  }
+}
+
+.gate-title {
+  margin: 0.75rem 0 0.25rem;
+  font-size: clamp(1.4rem, 5vw, 2.2rem);
+  letter-spacing: 0.18em;
+  color: #6de3ff;
+  text-shadow: 0 0 18px rgba(109, 227, 255, 0.55);
+}
+
+.gate-line1 {
+  margin: 0.5rem 0 0.15rem;
+  font-size: clamp(1rem, 3.6vw, 1.25rem);
+  font-weight: 600;
+}
+
+.gate-line2 {
+  margin: 0;
+  font-size: clamp(0.8rem, 3vw, 1rem);
+  opacity: 0.75;
+}
+
+/* Compact-size warning for tiny desktop windows (non-touch) */
+#size-warning {
+  position: fixed;
+  left: 50%;
+  bottom: calc(12px + var(--safe-bottom));
+  transform: translateX(-50%);
+  z-index: 900;
+  background: rgba(8, 14, 28, 0.92);
+  border: 1px solid rgba(109, 227, 255, 0.4);
+  color: #cfeeff;
+  font-size: 0.8rem;
+  padding: 6px 14px;
+  border-radius: 999px;
+  pointer-events: none;
+}
+
+#size-warning[hidden] {
+  display: none;
+}

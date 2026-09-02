@@ -1,0 +1,16 @@
+{
+  "id": "attack-button:attack_pressed",
+  "source": "Assets/ui/controls/01_attack_button_sheet.png",
+  "processedPath": "assets_processed/ui/controls/attack_pressed.png",
+  "kind": "still",
+  "width": 340,
+  "height": 333,
+  "sourceRect": {
+    "x": 819,
+    "y": 59,
+    "w": 340,
+    "h": 333,
+    "band": 0,
+    "index": 2
+  }
+}

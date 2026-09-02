@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#060912" />
+    <title>Chroma Clash</title>
+    <link rel="manifest" href="./manifest.webmanifest" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="game-shell">
+        <div id="game-container"></div>
+        <div id="orientation-gate" hidden>
+          <div class="gate-inner">
+            <div class="gate-icon" aria-hidden="true">
+              <svg viewBox="0 0 96 96" width="96" height="96" fill="none" stroke="#6de3ff" stroke-width="4">
+                <rect x="30" y="12" width="36" height="64" rx="6" />
+                <path d="M14 62 A40 40 0 0 1 26 30" stroke-linecap="round" />
+                <path d="M22 24 L26 30 L18 32 Z" fill="#6de3ff" stroke="none" />
+                <path d="M82 34 A40 40 0 0 1 70 66" stroke-linecap="round" />
+                <path d="M74 72 L70 66 L78 64 Z" fill="#6de3ff" stroke="none" />
+              </svg>
+            </div>
+            <h1 class="gate-title">CHROMA CLASH</h1>
+            <p class="gate-line1">Rotate your device to play</p>
+            <p class="gate-line2">Chroma Clash is designed for landscape mode</p>
+            <button id="gate-fullscreen" class="gate-button" type="button" hidden>
+              ENTER FULLSCREEN
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

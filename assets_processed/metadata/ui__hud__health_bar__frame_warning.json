@@ -1,0 +1,16 @@
+{
+  "id": "health-bar:frame_warning",
+  "source": "Assets/ui/hud/futuristic_health_bar_ui_sheet.png",
+  "processedPath": "assets_processed/ui/hud/health_bar/frame_warning.png",
+  "kind": "still",
+  "width": 1142,
+  "height": 126,
+  "sourceRect": {
+    "x": 251,
+    "y": 944,
+    "w": 1142,
+    "h": 126,
+    "band": 7,
+    "index": 0
+  }
+}

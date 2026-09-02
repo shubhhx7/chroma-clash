@@ -1,0 +1,96 @@
+{
+  "id": "landing-dust",
+  "source": "Assets/vfx/movement/03_landing_dust_sheet.png",
+  "processedPath": "assets_processed/vfx/movement/landing_dust.png",
+  "kind": "animation",
+  "frameWidth": 503,
+  "frameHeight": 503,
+  "frameCount": 6,
+  "fps": 18,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 503,
+      "h": 503,
+      "sourceRect": {
+        "x": 17,
+        "y": 9,
+        "w": 497,
+        "h": 498
+      }
+    },
+    {
+      "index": 1,
+      "x": 503,
+      "y": 0,
+      "w": 503,
+      "h": 503,
+      "sourceRect": {
+        "x": 518,
+        "y": 9,
+        "w": 499,
+        "h": 498
+      }
+    },
+    {
+      "index": 2,
+      "x": 1006,
+      "y": 0,
+      "w": 503,
+      "h": 503,
+      "sourceRect": {
+        "x": 1021,
+        "y": 9,
+        "w": 499,
+        "h": 498
+      }
+    },
+    {
+      "index": 3,
+      "x": 1509,
+      "y": 0,
+      "w": 503,
+      "h": 503,
+      "sourceRect": {
+        "x": 15,
+        "y": 516,
+        "w": 499,
+        "h": 499
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 503,
+      "w": 503,
+      "h": 503,
+      "sourceRect": {
+        "x": 518,
+        "y": 516,
+        "w": 499,
+        "h": 499
+      }
+    },
+    {
+      "index": 5,
+      "x": 503,
+      "y": 503,
+      "w": 503,
+      "h": 503,
+      "sourceRect": {
+        "x": 1021,
+        "y": 516,
+        "w": 499,
+        "h": 499
+      }
+    }
+  ]
+}

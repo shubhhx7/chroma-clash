@@ -1,0 +1,16 @@
+{
+  "id": "overlay-fight-hd",
+  "source": "Assets/ui/menus/fight.png",
+  "processedPath": "assets_processed/ui/hud/overlay_fight.png",
+  "kind": "still",
+  "passthrough": true,
+  "sha256": "b0eb4511a7f4610a41c099a9ebbd994f40c0e8bee0842104919e4223e357f57a",
+  "width": 1672,
+  "height": 941,
+  "contentRect": {
+    "x": 3,
+    "y": 179,
+    "w": 1668,
+    "h": 541
+  }
+}

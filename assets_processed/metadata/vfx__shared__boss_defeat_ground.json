@@ -1,0 +1,16 @@
+{
+  "id": "boss-defeat-vfx:boss_defeat_ground",
+  "source": "Assets/vfx/shared_combat/08_final_victory_boss_defeat_vfx_sheet.png",
+  "processedPath": "assets_processed/vfx/shared/boss_defeat_ground.png",
+  "kind": "still",
+  "width": 307,
+  "height": 164,
+  "sourceRect": {
+    "x": 8,
+    "y": 338,
+    "w": 307,
+    "h": 164,
+    "band": -1,
+    "index": -1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "upgrade-ui:icon_health",
+  "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",
+  "processedPath": "assets_processed/ui/upgrades/icon_health.png",
+  "kind": "still",
+  "width": 145,
+  "height": 163,
+  "sourceRect": {
+    "x": 1216,
+    "y": 885,
+    "w": 145,
+    "h": 163,
+    "band": -1,
+    "index": -1
+  }
+}

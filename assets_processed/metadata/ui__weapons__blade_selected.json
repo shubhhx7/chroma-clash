@@ -1,0 +1,16 @@
+{
+  "id": "weapon-icons:blade_selected",
+  "source": "Assets/weapons/kairo/icons/05_kairo_weapon_selection_icon_sheet.png",
+  "processedPath": "assets_processed/ui/weapons/blade_selected.png",
+  "kind": "still",
+  "width": 346,
+  "height": 390,
+  "sourceRect": {
+    "x": 362,
+    "y": 104,
+    "w": 346,
+    "h": 390,
+    "band": 0,
+    "index": 1
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "id": "upgrade-ui:icon_combo",
+  "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",
+  "processedPath": "assets_processed/ui/upgrades/icon_combo.png",
+  "kind": "still",
+  "width": 145,
+  "height": 162,
+  "sourceRect": {
+    "x": 446,
+    "y": 886,
+    "w": 145,
+    "h": 162,
+    "band": -1,
+    "index": -1
+  }
+}

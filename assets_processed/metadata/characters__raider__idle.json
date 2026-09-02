@@ -1,0 +1,123 @@
+{
+  "id": "hd-raider-idle",
+  "source": "Assets/sprites/raider/06_raider_idle_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/idle.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 593,
+  "frameHeight": 442,
+  "frameCount": 8,
+  "fps": 8,
+  "loop": true,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 10,
+        "y": 16,
+        "w": 429,
+        "h": 417
+      }
+    },
+    {
+      "index": 1,
+      "x": 593,
+      "y": 0,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 447,
+        "y": 7,
+        "w": 424,
+        "h": 426
+      }
+    },
+    {
+      "index": 2,
+      "x": 1186,
+      "y": 0,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 879,
+        "y": 38,
+        "w": 435,
+        "h": 396
+      }
+    },
+    {
+      "index": 3,
+      "x": 0,
+      "y": 442,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 1322,
+        "y": 6,
+        "w": 427,
+        "h": 427
+      }
+    },
+    {
+      "index": 4,
+      "x": 593,
+      "y": 442,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 10,
+        "y": 461,
+        "w": 431,
+        "h": 414
+      }
+    },
+    {
+      "index": 5,
+      "x": 1186,
+      "y": 442,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 442,
+        "y": 449,
+        "w": 429,
+        "h": 426
+      }
+    },
+    {
+      "index": 6,
+      "x": 0,
+      "y": 884,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 881,
+        "y": 484,
+        "w": 434,
+        "h": 391
+      }
+    },
+    {
+      "index": 7,
+      "x": 593,
+      "y": 884,
+      "w": 593,
+      "h": 442,
+      "sourceRect": {
+        "x": 1325,
+        "y": 454,
+        "w": 426,
+        "h": 421
+      }
+    }
+  ]
+}

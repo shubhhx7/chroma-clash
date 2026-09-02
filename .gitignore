@@ -1,0 +1,24 @@
+node_modules/
+dist/
+test-results/
+playwright-report/
+*.local
+# Chroma Clash large assets
+Assets/
+source-assets/
+public/assets/
+public/Assets/
+
+# Large media / archives
+*.mp4
+*.mov
+*.zip
+*.psd
+
+# Environment files
+.env
+.env.local
+.env.production
+.env.development
+
+.vercel/

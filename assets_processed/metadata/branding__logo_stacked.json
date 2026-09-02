@@ -1,0 +1,14 @@
+{
+  "id": "logo:logo_stacked",
+  "source": "Assets/branding/logo/01_game_logo_title_lockup_sheet.png",
+  "processedPath": "assets_processed/branding/logo_stacked.png",
+  "kind": "still",
+  "width": 395,
+  "height": 333,
+  "sourceRect": {
+    "x": 478,
+    "y": 69,
+    "w": 395,
+    "h": 333
+  }
+}

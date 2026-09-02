@@ -1,0 +1,97 @@
+{
+  "id": "hd-raider-dodge",
+  "source": "Assets/sprites/raider/12_raider_dodge_hd_sheet.png",
+  "processedPath": "assets_processed/characters/raider/dodge.png",
+  "kind": "animation",
+  "bakedStandingPx": 430,
+  "frameWidth": 732,
+  "frameHeight": 452,
+  "frameCount": 6,
+  "fps": 14,
+  "loop": false,
+  "pivot": {
+    "x": 0.5,
+    "y": 1
+  },
+  "baseline": 1,
+  "frames": [
+    {
+      "index": 0,
+      "x": 0,
+      "y": 0,
+      "w": 732,
+      "h": 452,
+      "sourceRect": {
+        "x": 13,
+        "y": 59,
+        "w": 494,
+        "h": 426
+      }
+    },
+    {
+      "index": 1,
+      "x": 732,
+      "y": 0,
+      "w": 732,
+      "h": 452,
+      "sourceRect": {
+        "x": 547,
+        "y": 44,
+        "w": 471,
+        "h": 440
+      }
+    },
+    {
+      "index": 2,
+      "x": 0,
+      "y": 452,
+      "w": 732,
+      "h": 452,
+      "sourceRect": {
+        "x": 1047,
+        "y": 27,
+        "w": 451,
+        "h": 441
+      }
+    },
+    {
+      "index": 3,
+      "x": 732,
+      "y": 452,
+      "w": 732,
+      "h": 452,
+      "sourceRect": {
+        "x": 27,
+        "y": 576,
+        "w": 486,
+        "h": 405
+      }
+    },
+    {
+      "index": 4,
+      "x": 0,
+      "y": 904,
+      "w": 732,
+      "h": 452,
+      "sourceRect": {
+        "x": 520,
+        "y": 568,
+        "w": 507,
+        "h": 413
+      }
+    },
+    {
+      "index": 5,
+      "x": 732,
+      "y": 904,
+      "w": 732,
+      "h": 452,
+      "sourceRect": {
+        "x": 1044,
+        "y": 533,
+        "w": 483,
+        "h": 458
+      }
+    }
+  ]
+}
