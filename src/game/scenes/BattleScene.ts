@@ -324,6 +324,7 @@ export class BattleScene extends Phaser.Scene {
     this.events.off(COMBAT_EVENTS.PARRY, this.onParry, this);
     this.events.off(COMBAT_EVENTS.KO, this.onKO, this);
     this.hitStop.reset();
+    this.touchControls.destroy();
     this.sizeWarning.destroy();
     this.resultPanel?.destroy();
   }
@@ -799,6 +800,9 @@ export class BattleScene extends Phaser.Scene {
       kairoAttackId: this.kairo.activeAttack?.id ?? null,
       kairoState: this.kairo.stateMachine.current,
       raiderState: this.enemy.stateMachine.current,
+      enemyAIState: this.enemyAI.state,
+      enemyAttackId: this.enemy.activeAttack?.id ?? null,
+      enemyAttackInstanceId: this.enemy.attackInstanceId,
       vaelPhase: this.enemyAI instanceof VaelAI ? this.enemyAI.phase : 0,
       resultVisible: this.resultPanel != null,
       safe: this.safe,

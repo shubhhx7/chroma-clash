@@ -38,7 +38,6 @@ export const SCENES = {
   RESULT: 'ResultScene',
   ASSET_GALLERY: 'AssetGalleryScene',
   CYCLE: 'CycleScene',
-  TUTORIAL: 'TutorialScene',
 } as const;
 
 /** Registry keys for cross-scene services. */

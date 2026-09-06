@@ -16,6 +16,7 @@ interface Hook {
   resultVisible: boolean;
   fightToken: number;
   damageEnemy?: (n: number) => void;
+  damagePlayer?: (n: number) => void;
 }
 
 const hook = (page: Page) =>
@@ -45,6 +46,10 @@ async function landRealHitThenDrain(page: Page): Promise<void> {
     if (s.phase !== 'fighting') break; // already KO'd (defensive)
     if (s.raiderHealth < before.raiderHealth) break;
   }
+  // This integration test is validating run transitions, not AI victory.
+  // Keep enough health to ensure the now-active Raider cannot end the round
+  // while the deterministic 1-HP finishing sequence is being performed.
+  await page.evaluate(() => (window as never as { __ccBattle: Hook }).__ccBattle.damagePlayer?.(-200) as never);
   // drain the rest deterministically via the dev hook, then land the decisive hit
   await page.evaluate(() => (window as never as { __ccBattle: Hook }).__ccBattle.damageEnemy?.(9999) as never);
   for (let i = 0; i < 45; i++) {
@@ -96,16 +101,31 @@ test('complete run: weapon select, three fights, upgrades, phases, final result,
   // menu -> weapon select
   await page.goto('/');
   await waitFor(page, `window.__ccMenu === true`);
+  const menu = await page.evaluate(() => {
+    const game = (window as never as { __chromaClash: { game: Phaser.Game } }).__chromaClash.game;
+    const scene = game.scene.getScene('MenuScene');
+    return {
+      title: (scene.children.getByName('controlsTitle') as Phaser.GameObjects.Text).text,
+      controls: (scene.children.getByName('controls') as Phaser.GameObjects.Text).text,
+      tutorialSceneRegistered: game.scene.keys.TutorialScene !== undefined,
+      tutorialTextureLoaded: game.textures.exists('ui.tutorial_page'),
+    };
+  });
+  expect(menu.title).toBe('HOW TO PLAY  /  CONTROLS');
+  expect(menu.controls).toContain('A / ←');
+  expect(menu.controls).toContain('D / →');
+  expect(menu.controls).toContain('Space / W / ↑');
+  expect(menu.controls).toContain('J Light');
+  expect(menu.controls).toContain('K Heavy');
+  expect(menu.controls).toContain('I Kick');
+  expect(menu.controls).toContain('E Dash');
+  expect(menu.controls).toContain('S / ↓ Block');
+  expect(menu.controls).toContain('L Special');
+  expect(menu.tutorialSceneRegistered).toBe(false);
+  expect(menu.tutorialTextureLoaded).toBe(false);
   await page.keyboard.press('Enter');
   await waitFor(page, `window.__ccWeaponSelect === true`);
   await page.keyboard.press('Enter'); // Chroma Blade preselected -> BEGIN THE RUN
-
-  // first run in a fresh browser: the tutorial page shows once before fight 1
-  await waitFor(page, `window.__ccTutorial === true || !!window.__ccBattle`);
-  if (await page.evaluate(() => (window as never as { __ccTutorial?: boolean }).__ccTutorial === true)) {
-    await page.waitForTimeout(600); // input grace period on the tutorial
-    await page.keyboard.press('Enter');
-  }
 
   // ---- fight 1: Raider ----
   await waitForBattleEnemy(page, 'raider', 0);

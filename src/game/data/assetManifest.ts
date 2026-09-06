@@ -1972,14 +1972,12 @@ export const ASSET_MANIFEST: readonly AssetManifestRecord[] = [
     "sourcePath": "Assets/ui/tutorial/tutorial.png",
     "category": "ui",
     "system": "UNCLASSIFIED",
-    "classification": "source-sheet",
-    "expectedUse": "Full tutorial page (controls + abilities) — first-run flow and HOW TO PLAY menu entry",
-    "processingStatus": "processed",
-    "processedPaths": [
-      "assets_processed/ui/tutorial_page.png"
-    ],
-    "runtimeScene": "TutorialScene",
-    "wired": true,
+    "classification": "reference-only",
+    "expectedUse": "Archived tutorial artwork retained as a source reference; not loaded at runtime",
+    "processingStatus": "not-applicable",
+    "processedPaths": [],
+    "runtimeScene": null,
+    "wired": false,
     "notes": "",
     "width": 1536,
     "height": 1024

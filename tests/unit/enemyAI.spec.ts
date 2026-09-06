@@ -94,6 +94,20 @@ describe('EnemyAI', () => {
     expect(dead.state).toBe(AIState.DEFEAT);
   });
 
+  it('returns to combat decisions after hit-stun ends', () => {
+    const self = mockFighter({ isInHitStun: true });
+    const target = mockFighter({ x: 180 });
+    const ai = new EnemyAI(self, target, CFG);
+
+    ai.decide(16);
+    expect(ai.state).toBe(AIState.HIT);
+
+    (self as unknown as { isInHitStun: boolean }).isInHitStun = false;
+    ai.decide(16);
+    expect(ai.state).toBe(AIState.IDLE);
+    expect(run(ai, 800).some((intent) => intent.attack)).toBe(true);
+  });
+
   it('respects the attack cooldown', () => {
     const self = mockFighter({ x: 0 });
     const target = mockFighter({ x: 180 });

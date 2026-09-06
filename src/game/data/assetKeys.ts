@@ -127,7 +127,6 @@ export const TEX = {
   VFX_HEAVY_ARC: 'vfx.kairo.heavy_arc',
   VFX_DASH_DUST: 'vfx.movement.dash_dust',
   VFX_LANDING_DUST: 'vfx.movement.landing_dust',
-  TUTORIAL_PAGE: 'ui.tutorial_page',
   COMBO_X2: 'ui.hud.combo.combo_x2',
   COMBO_X3: 'ui.hud.combo.combo_x3',
   COMBO_X5: 'ui.hud.combo.combo_x5',

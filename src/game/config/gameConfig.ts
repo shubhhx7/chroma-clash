@@ -14,7 +14,6 @@ import { UpgradeScene } from '../scenes/UpgradeScene';
 import { ResultScene } from '../scenes/ResultScene';
 import { AssetGalleryScene } from '../scenes/AssetGalleryScene';
 import { CycleScene } from '../scenes/CycleScene';
-import { TutorialScene } from '../scenes/TutorialScene';
 
 export function createGameConfig(
   parent: HTMLElement,
@@ -68,7 +67,6 @@ export function createGameConfig(
       ResultScene,
       AssetGalleryScene,
       CycleScene,
-      TutorialScene,
     ],
   };
 }

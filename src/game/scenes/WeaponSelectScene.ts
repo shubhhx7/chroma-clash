@@ -11,7 +11,6 @@ import { TEX } from '../data/assetKeys';
 import { RunState, WEAPONS, type WeaponDefinition } from '../data/runState';
 import { KAIRO_CONFIG } from '../data/fighterConfigs';
 import { audio } from '../audio/AudioManager';
-import { TUTORIAL_NEXT, TUTORIAL_SEEN_KEY } from './TutorialScene';
 import { onTap, MIN_TOUCH_PX } from '../ui/tapTarget';
 import { SafeAreaService } from '../responsive/SafeAreaService';
 
@@ -33,6 +32,7 @@ export class WeaponSelectScene extends Phaser.Scene {
   private confirmBg!: Phaser.GameObjects.Rectangle;
   private resizeHandler: (() => void) | null = null;
   private readonly safeArea = new SafeAreaService();
+  private transitioning = false;
 
   constructor() {
     super(SCENES.WEAPON_SELECT);
@@ -41,6 +41,8 @@ export class WeaponSelectScene extends Phaser.Scene {
   create(): void {
     this.cards = [];
     this.selectedId = 'chroma-blade';
+    this.transitioning = false;
+    this.input.enabled = true;
     this.cameras.main.setBackgroundColor('#080d18');
     this.add.image(0, 0, TEX.ARENA_RUINS).setName('backdrop').setAlpha(0.35);
 
@@ -112,6 +114,7 @@ export class WeaponSelectScene extends Phaser.Scene {
   }
 
   private select(weapon: WeaponDefinition): void {
+    if (this.transitioning) return;
     if (!weapon.available) {
       audio.sfx('ui-denied');
       return;
@@ -128,23 +131,19 @@ export class WeaponSelectScene extends Phaser.Scene {
   }
 
   private confirm(): void {
+    if (this.transitioning) return;
+    const selected = WEAPONS.find((weapon) => weapon.id === this.selectedId);
+    if (!selected?.available) {
+      audio.sfx('ui-denied');
+      return;
+    }
+    this.transitioning = true;
+    this.input.enabled = false;
     audio.sfx('ui-select');
     const run = new RunState(this.selectedId, KAIRO_CONFIG.maxHealth);
     this.registry.set(REGISTRY.RUN_STATE, run);
     (window as Window & { __ccWeaponSelect?: boolean }).__ccWeaponSelect = false;
-    let seen = true;
-    try {
-      seen = localStorage.getItem(TUTORIAL_SEEN_KEY) === '1';
-    } catch {
-      /* storage unavailable */
-    }
-    if (!seen) {
-      // first run ever: show how to play once before the first fight
-      this.registry.set(TUTORIAL_NEXT, SCENES.BATTLE);
-      this.scene.start(SCENES.TUTORIAL);
-    } else {
-      this.scene.start(SCENES.BATTLE);
-    }
+    this.scene.start(SCENES.BATTLE);
   }
 
   private layout(): void {

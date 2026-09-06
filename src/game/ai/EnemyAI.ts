@@ -124,7 +124,13 @@ export class EnemyAI {
 
     switch (this.state) {
       case AIState.DEFEAT:
+        return none;
+
       case AIState.HIT:
+        // Fighter hit-stun has ended (the early return above handles the
+        // frames where it is still active). Re-enter the normal decision
+        // graph instead of leaving the AI permanently passive in HIT.
+        this.state = AIState.IDLE;
         return none;
 
       case AIState.BLOCK:

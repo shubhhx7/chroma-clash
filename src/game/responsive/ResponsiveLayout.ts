@@ -29,6 +29,8 @@ export interface TouchLayout {
   attackY: number;
   heavyX: number;
   heavyY: number;
+  dashX: number;
+  dashY: number;
   jumpX: number;
   jumpY: number;
   blockX: number;
@@ -69,10 +71,16 @@ export function computeTouchLayout(
   controlSizePx: number,
 ): TouchLayout {
   const size = controlSizePx;
-  const pad = Math.max(10, size * 0.18);
-  const bottom = cssHeight - safe.bottom - pad - size / 2;
-  const left = safe.left + pad + size / 2;
-  const right = cssWidth - safe.right - pad - size / 2;
+  // The primary attack art renders slightly larger than the nominal control
+  // diameter. Budget for that actual radius so its pixels and hit area stay
+  // inside the safe viewport instead of clipping at the right/bottom edge.
+  const edge = Math.max(12, size * 0.18);
+  const largestRadius = size * 0.58;
+  const bottom = cssHeight - safe.bottom - edge - largestRadius;
+  const left = safe.left + edge + size / 2;
+  const right = cssWidth - safe.right - edge - largestRadius;
+  const columnGap = size * 1.18;
+  const rowGap = size * 1.16;
   return {
     size,
     // bottom-left: movement
@@ -80,19 +88,19 @@ export function computeTouchLayout(
     leftBtnY: bottom,
     rightBtnX: left + size * 1.25,
     rightBtnY: bottom,
-    // bottom-right action cluster (thumb arc):
-    //   attack   = corner (primary)   heavy = left of attack
-    //   jump     = above attack       block = diagonal
-    //   special  = top of the arc
+    // bottom-right action cluster: a spacious 3 x 2 grid fits all six
+    // actions, including Dash, without edge clipping or button overlap.
     attackX: right,
     attackY: bottom,
-    heavyX: right - size * 1.22,
-    heavyY: bottom + size * 0.06,
+    heavyX: right - columnGap,
+    heavyY: bottom,
+    dashX: right - columnGap * 2,
+    dashY: bottom,
     jumpX: right,
-    jumpY: bottom - size * 1.22,
-    blockX: right - size * 1.22,
-    blockY: bottom - size * 1.1,
-    specialX: right - size * 2.28,
-    specialY: bottom - size * 0.5,
+    jumpY: bottom - rowGap,
+    blockX: right - columnGap,
+    blockY: bottom - rowGap,
+    specialX: right - columnGap * 2,
+    specialY: bottom - rowGap,
   };
 }

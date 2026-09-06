@@ -761,12 +761,6 @@ export const PROCESSED_STILLS = {
     "width": 708,
     "height": 187
   },
-  "ui.tutorial_page": {
-    "url": "ui/tutorial_page.png",
-    "source": "Assets/ui/tutorial/tutorial.png",
-    "width": 1536,
-    "height": 1024
-  },
   "ui.upgrades.card_default": {
     "url": "ui/upgrades/card_default.png",
     "source": "Assets/ui/upgrades/08_upgrade_choice_ui_icon_sheet.png",

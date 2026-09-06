@@ -1761,28 +1761,6 @@
       "type": "passthrough"
     },
     {
-      "id": "tutorial-page",
-      "source": "Assets/ui/tutorial/tutorial.png",
-      "type": "alpha-sheet",
-      "minAlpha": 0,
-      "output": {
-        "kind": "stills",
-        "dir": "ui",
-        "pick": [
-          {
-            "band": 0,
-            "rect": [
-              0,
-              0,
-              1,
-              1
-            ],
-            "name": "tutorial_page"
-          }
-        ]
-      }
-    },
-    {
       "id": "chroma-burst-vfx",
       "source": "Assets/vfx/kairo/06_kairo_chroma_burst_special_vfx_sheet.png",
       "type": "alpha-sheet",

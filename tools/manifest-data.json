@@ -1091,10 +1091,10 @@
     },
     "Assets/ui/tutorial/tutorial.png": {
       "category": "ui",
-      "classification": "source-sheet",
-      "wired": true,
-      "scene": "TutorialScene",
-      "use": "Full tutorial page (controls + abilities) — first-run flow and HOW TO PLAY menu entry"
+      "classification": "reference-only",
+      "wired": false,
+      "scene": null,
+      "use": "Archived tutorial artwork retained as a source reference; not loaded at runtime"
     }
   }
 }

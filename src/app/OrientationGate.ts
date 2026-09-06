@@ -23,6 +23,7 @@ export class OrientationGate {
     this.game = game;
     window.addEventListener('resize', this.evaluate);
     window.addEventListener('orientationchange', this.evaluate);
+    document.addEventListener('visibilitychange', this.onVisibilityChange);
     window.matchMedia('(orientation: portrait)').addEventListener?.('change', this.evaluate);
     this.evaluate();
     // Game.start() begins the loop right AFTER the READY event, which would
@@ -52,7 +53,14 @@ export class OrientationGate {
 
   private evaluate = (): void => {
     const shouldGate = OrientationGate.isTouchOriented() && OrientationGate.isPortrait();
-    if (shouldGate === this.gateActive) return;
+    if (shouldGate === this.gateActive) {
+      this.overlay.hidden = !shouldGate;
+      // Mobile browsers can suspend the Phaser loop while backgrounded or
+      // while fullscreen/orientation settles without changing our gate
+      // state. Reconcile it when visible so AI and combat cannot stay asleep.
+      if (!shouldGate && document.visibilityState === 'visible') this.restorePlay();
+      return;
+    }
     this.gateActive = shouldGate;
     this.overlay.hidden = !shouldGate;
     if (!this.game) return;
@@ -60,11 +68,7 @@ export class OrientationGate {
     if (shouldGate) {
       this.applyPause();
     } else {
-      this.game.loop.wake();
-      this.game.sound.mute = false;
-      for (const scene of this.game.scene.getScenes(false)) {
-        if (scene.scene.isPaused()) scene.scene.resume();
-      }
+      this.restorePlay();
     }
     for (const cb of this.onChangeCallbacks) cb(shouldGate);
     // let input layers clear held pointers (stuck-input protection)
@@ -81,8 +85,22 @@ export class OrientationGate {
     this.game.loop.sleep();
   }
 
+  private restorePlay(): void {
+    if (!this.game) return;
+    this.game.loop.wake();
+    this.game.sound.mute = false;
+    for (const scene of this.game.scene.getScenes(false)) {
+      if (scene.scene.isPaused()) scene.scene.resume();
+    }
+  }
+
+  private onVisibilityChange = (): void => {
+    if (document.visibilityState === 'visible') this.evaluate();
+  };
+
   destroy(): void {
     window.removeEventListener('resize', this.evaluate);
     window.removeEventListener('orientationchange', this.evaluate);
+    document.removeEventListener('visibilitychange', this.onVisibilityChange);
   }
 }

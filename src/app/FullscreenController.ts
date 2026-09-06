@@ -17,6 +17,8 @@ import { enterMobileFullscreen, isFullscreen, lockLandscape, onFullscreenChange,
 export class FullscreenController {
   private attempts = 0;
   private listening = false;
+  private attemptInFlight = false;
+  private gestureEvent: 'pointerup' | 'touchend' | null = null;
   private onChanged: (() => void) | null = null;
 
   /** @param onStateChange called after fullscreen/orientation settles so the shell can re-measure. */
@@ -32,18 +34,31 @@ export class FullscreenController {
     // Any gesture is a chance to enter fullscreen. Retry a few times: the
     // first tap often lands on the rotate overlay or is spent unlocking audio.
     const attempt = (): void => {
+      if (this.attemptInFlight) return;
       if (isFullscreen() || this.attempts >= 5) {
         this.teardownGestureListeners();
         return;
       }
       this.attempts += 1;
+      this.attemptInFlight = true;
       void enterMobileFullscreen().then(({ fullscreen }) => {
         if (fullscreen) this.teardownGestureListeners();
+      }).finally(() => {
+        this.attemptInFlight = false;
       });
     };
     this.gestureAttempt = attempt;
-    window.addEventListener('pointerup', attempt);
-    window.addEventListener('touchend', attempt);
+    // Browsers that support Pointer Events also emit compatibility touch
+    // events. Listening to both launched two concurrent fullscreen requests
+    // from one tap, which could resize the canvas during weapon transition.
+    const supportsPointerEvents = typeof window.PointerEvent !== 'undefined';
+    if (supportsPointerEvents) {
+      this.gestureEvent = 'pointerup';
+      window.addEventListener('pointerup', attempt);
+    } else {
+      this.gestureEvent = 'touchend';
+      window.addEventListener('touchend', attempt);
+    }
     this.listening = true;
 
     // Entering fullscreen resizes the viewport; re-assert the lock and let
@@ -69,9 +84,9 @@ export class FullscreenController {
   }
 
   private teardownGestureListeners(): void {
-    if (!this.listening || !this.gestureAttempt) return;
-    window.removeEventListener('pointerup', this.gestureAttempt);
-    window.removeEventListener('touchend', this.gestureAttempt);
+    if (!this.listening || !this.gestureAttempt || !this.gestureEvent) return;
+    window.removeEventListener(this.gestureEvent, this.gestureAttempt);
     this.listening = false;
+    this.gestureEvent = null;
   }
 }

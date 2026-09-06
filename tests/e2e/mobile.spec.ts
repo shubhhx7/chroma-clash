@@ -7,30 +7,52 @@ import { test, expect, type Page } from '@playwright/test';
 interface Hook {
   phase: string;
   kairoX: number;
+  kairoHealth: number;
+  raiderHealth: number;
   kairoState: string;
   kairoAttackId: string | null;
+  enemyAIState: string;
+  enemyAttackId: string | null;
+  enemyAttackInstanceId: number;
   touchControlsVisible: boolean;
 }
 
 const hookOf = (page: Page) =>
   page.evaluate(() => {
     const b = (window as never as { __ccBattle: Hook }).__ccBattle;
-    return { phase: b.phase, kairoX: b.kairoX, kairoState: b.kairoState, kairoAttackId: b.kairoAttackId, visible: b.touchControlsVisible };
+    return {
+      phase: b.phase,
+      kairoX: b.kairoX,
+      kairoHealth: b.kairoHealth,
+      raiderHealth: b.raiderHealth,
+      kairoState: b.kairoState,
+      kairoAttackId: b.kairoAttackId,
+      enemyAIState: b.enemyAIState,
+      enemyAttackId: b.enemyAttackId,
+      enemyAttackInstanceId: b.enemyAttackInstanceId,
+      visible: b.touchControlsVisible,
+    };
   });
 
-/** Approximate on-screen control positions (mirrors computeTouchLayout). */
-function controlPoints(width: number, height: number) {
-  const size = Math.min(96, Math.max(72, Math.min(width, height) * 0.2));
-  const pad = Math.max(10, size * 0.18);
-  const bottom = height - pad - size / 2;
-  const left = pad + size / 2;
-  const right = width - pad - size / 2;
-  return {
-    moveRight: { x: left + size * 1.25, y: bottom },
-    attack: { x: right, y: bottom },
-    block: { x: right - size * 1.22, y: bottom - size * 1.1 },
-  };
-}
+/** Read the rendered control centres so interaction tests also follow relayouts. */
+const controlPoints = (page: Page) =>
+  page.evaluate(() => {
+    const game = (window as never as { __chromaClash: { game: Phaser.Game } }).__chromaClash.game;
+    const scene = game.scene.getScene('BattleScene') as Phaser.Scene & {
+      touchControls: { buttons: Array<{ action: string; image: Phaser.GameObjects.Image }> };
+    };
+    const point = (name: string): { x: number; y: number } => {
+      const control = scene.touchControls.buttons.find((button) => button.action === name)?.image;
+      if (!control) throw new Error(`Missing touch control: ${name}`);
+      return { x: control.x, y: control.y };
+    };
+    return {
+      moveRight: point('MOVE_RIGHT'),
+      attack: point('ATTACK'),
+      dash: point('DASH'),
+      block: point('BLOCK'),
+    };
+  });
 
 test('mobile: simultaneous movement + attack, block hold, rotation does not stick input', async ({ browser }) => {
   test.setTimeout(120_000);
@@ -51,7 +73,7 @@ test('mobile: simultaneous movement + attack, block hold, rotation does not stic
   await page.waitForFunction(() => (window as never as { __ccBattle?: { phase: string } }).__ccBattle?.phase === 'fighting', undefined, {
     timeout: 30_000,
   });
-  const pts = controlPoints(width, height);
+  const pts = await controlPoints(page);
   const cdp = await context.newCDPSession(page);
 
   // ---- multitouch: hold move-right AND tap attack at the same time ----
@@ -104,6 +126,39 @@ test('mobile: simultaneous movement + attack, block hold, rotation does not stic
   const moved = await hookOf(page);
   expect(moved.kairoX, 'kairo moved right while attacking').toBeGreaterThan(startX + 20);
 
+  // ---- multitouch: movement + the dedicated Dash action ----
+  let dashSeen = false;
+  for (let attempt = 0; attempt < 6 && !dashSeen; attempt++) {
+    await page.waitForFunction(
+      () => {
+        const state = (window as never as { __ccBattle: Hook }).__ccBattle.kairoState;
+        return state === 'IDLE' || state === 'WALK';
+      },
+      undefined,
+      { timeout: 5_000 },
+    );
+    await cdp.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: [{ x: pts.moveRight.x, y: pts.moveRight.y, id: 5 }],
+    });
+    await page.waitForTimeout(80);
+    await cdp.send('Input.dispatchTouchEvent', {
+      type: 'touchStart',
+      touchPoints: [
+        { x: pts.moveRight.x, y: pts.moveRight.y, id: 5 },
+        { x: pts.dash.x, y: pts.dash.y, id: 6 },
+      ],
+    });
+    for (let i = 0; i < 20 && !dashSeen; i++) {
+      const state = await hookOf(page);
+      dashSeen = state.kairoAttackId === 'kairo-dash';
+      if (!dashSeen) await page.waitForTimeout(20);
+    }
+    await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+    if (!dashSeen) await page.waitForTimeout(220);
+  }
+  expect(dashSeen, 'dash fired through the shared dash action while movement was held').toBe(true);
+
   // ---- block hold / release ----
   await page.waitForTimeout(600);
   await cdp.send('Input.dispatchTouchEvent', {
@@ -117,6 +172,23 @@ test('mobile: simultaneous movement + attack, block hold, rotation does not stic
   await page.waitForFunction(() => (window as never as { __ccBattle: Hook }).__ccBattle.kairoState !== 'BLOCK', undefined, {
     timeout: 5_000,
   });
+
+  // ---- cancellation: an interrupted pointer must not leave movement held ----
+  await cdp.send('Input.dispatchTouchEvent', {
+    type: 'touchStart',
+    touchPoints: [{ x: pts.moveRight.x, y: pts.moveRight.y, id: 7 }],
+  });
+  await page.waitForTimeout(180);
+  await page.evaluate(() => {
+    const canvas = document.querySelector('#game-container canvas');
+    canvas?.dispatchEvent(new PointerEvent('pointercancel', { pointerId: 7, bubbles: true }));
+  });
+  await cdp.send('Input.dispatchTouchEvent', { type: 'touchEnd', touchPoints: [] });
+  await page.waitForTimeout(350);
+  const cancelA = (await hookOf(page)).kairoX;
+  await page.waitForTimeout(450);
+  const cancelB = (await hookOf(page)).kairoX;
+  expect(Math.abs(cancelB - cancelA), 'pointercancel releases held movement').toBeLessThan(25);
 
   // ---- rotation: no stuck movement afterwards ----
   await cdp.send('Input.dispatchTouchEvent', {

@@ -76,6 +76,7 @@ body {
 
 #orientation-gate[hidden] {
   display: none;
+  visibility: hidden;
   /* belt and braces: a hidden overlay must never swallow a tap, even if
    * something later makes it visible-but-transparent */
   pointer-events: none;
@@ -100,6 +101,8 @@ body {
 
 .gate-button[hidden] {
   display: none;
+  visibility: hidden;
+  pointer-events: none;
 }
 
 .gate-button:active {

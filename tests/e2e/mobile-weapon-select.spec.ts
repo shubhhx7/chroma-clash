@@ -36,6 +36,44 @@ interface Geometry {
   btnY: number;
 }
 
+interface MenuGeometry {
+  allInside: boolean;
+  controlsOverlapLogo: boolean;
+  controlsOverlapPrompt: boolean;
+  title: string;
+  controls: string;
+  controlsInteractive: boolean;
+  tutorialSceneRegistered: boolean;
+  tutorialTextureLoaded: boolean;
+}
+
+const menuGeometry = (page: Page): Promise<MenuGeometry> =>
+  page.evaluate(() => {
+    const game = (window as never as { __chromaClash: { game: Phaser.Game } }).__chromaClash.game;
+    const scene = game.scene.getScene('MenuScene');
+    const title = scene.children.getByName('controlsTitle') as Phaser.GameObjects.Text;
+    const controls = scene.children.getByName('controls') as Phaser.GameObjects.Text;
+    const logo = scene.children.list.find((object) => object.type === 'Image' && object !== scene.children.list[0]) as Phaser.GameObjects.Image;
+    const prompt = scene.children.list.find(
+      (object) => object.type === 'Text' && (object as Phaser.GameObjects.Text).text === 'TAP TO FIGHT',
+    ) as Phaser.GameObjects.Text;
+    const vw = window.innerWidth;
+    const vh = window.innerHeight;
+    const inside = (box: Phaser.Geom.Rectangle): boolean =>
+      box.x >= -0.5 && box.y >= -0.5 && box.right <= vw + 0.5 && box.bottom <= vh + 0.5;
+    const controlsBox = Phaser.Geom.Rectangle.Union(title.getBounds(), controls.getBounds());
+    return {
+      allInside: inside(title.getBounds()) && inside(controls.getBounds()),
+      controlsOverlapLogo: Phaser.Geom.Intersects.RectangleToRectangle(controlsBox, logo.getBounds()),
+      controlsOverlapPrompt: Phaser.Geom.Intersects.RectangleToRectangle(controlsBox, prompt.getBounds()),
+      title: title.text,
+      controls: controls.text,
+      controlsInteractive: controls.input !== null || title.input !== null,
+      tutorialSceneRegistered: game.scene.keys.TutorialScene !== undefined,
+      tutorialTextureLoaded: game.textures.exists('ui.tutorial_page'),
+    };
+  });
+
 const geometry = (page: Page): Promise<Geometry> =>
   page.evaluate(() => {
     type Box = { x: number; y: number; w: number; h: number };
@@ -85,19 +123,23 @@ for (const { width, height, dpr } of SIZES) {
       isMobile: true,
     });
     const page = await context.newPage();
-    await page.addInitScript(() => {
-      try {
-        localStorage.setItem('chroma-clash-tutorial-seen', '1');
-      } catch {
-        /* storage unavailable */
-      }
-    });
     await page.goto('/');
     await page.waitForFunction('window.__ccMenu === true', undefined, { timeout: 30_000 });
 
     // the document must not scroll or zoom under a finger
     expect(await page.evaluate('document.documentElement.scrollHeight - document.documentElement.clientHeight')).toBe(0);
     expect(await page.evaluate('getComputedStyle(document.body).touchAction')).toBe('none');
+
+    const menu = await menuGeometry(page);
+    expect(menu.title).toBe('HOW TO PLAY  /  CONTROLS');
+    expect(menu.controls).toContain('LEFT SIDE  Move left / right');
+    expect(menu.controls).toContain('RIGHT SIDE  Light · Heavy · Jump · Dash · Block · Special');
+    expect(menu.allInside, 'home-screen controls must fit the landscape viewport').toBe(true);
+    expect(menu.controlsOverlapLogo, 'home-screen controls must not cover the logo').toBe(false);
+    expect(menu.controlsOverlapPrompt, 'home-screen controls must not cover the start prompt').toBe(false);
+    expect(menu.controlsInteractive, 'controls copy must not capture taps').toBe(false);
+    expect(menu.tutorialSceneRegistered).toBe(false);
+    expect(menu.tutorialTextureLoaded).toBe(false);
 
     const cdp = await context.newCDPSession(page);
     await page.touchscreen.tap(width / 2, height * 0.45);
@@ -127,3 +169,41 @@ for (const { width, height, dpr } of SIZES) {
     await context.close();
   });
 }
+
+test('mobile fullscreen rejection never blocks weapon selection or starts twice', async ({ browser }) => {
+  const context = await browser.newContext({
+    viewport: { width: 844, height: 390 },
+    deviceScaleFactor: 2,
+    hasTouch: true,
+    isMobile: true,
+  });
+  await context.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { configurable: true, get: () => false });
+    Object.defineProperty(HTMLElement.prototype, 'requestFullscreen', {
+      configurable: true,
+      value(): Promise<void> {
+        const state = window as Window & { __fsAttempts?: number };
+        state.__fsAttempts = (state.__fsAttempts ?? 0) + 1;
+        return Promise.reject(new DOMException('Fullscreen denied', 'NotAllowedError'));
+      },
+    });
+  });
+
+  const page = await context.newPage();
+  await page.goto('/');
+  await page.waitForFunction('window.__ccMenu === true', undefined, { timeout: 30_000 });
+
+  // Chromium emits both Pointer Events and compatibility touch events for one
+  // tap. The fullscreen controller must issue only one request and the failed
+  // promise must not interfere with Menu -> Weapon Select -> Battle.
+  await page.touchscreen.tap(422, 176);
+  await page.waitForFunction('window.__ccWeaponSelect === true', undefined, { timeout: 20_000 });
+  expect(await page.evaluate('(window.__fsAttempts ?? 0)')).toBe(1);
+
+  const g = await geometry(page);
+  await page.touchscreen.tap(g.btnX, g.btnY);
+  await page.waitForFunction('window.__ccWeaponSelect !== true', undefined, { timeout: 20_000 });
+  expect(await page.evaluate('(window.__fsAttempts ?? 0)')).toBeGreaterThanOrEqual(1);
+
+  await context.close();
+});

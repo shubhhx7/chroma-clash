@@ -214,7 +214,11 @@ test('desktop: keyboard attack damages the raider and KO/restart work', async ({
 
   // restart with R begins a fresh fight
   const tokenBefore = koState.fightToken;
-  await page.keyboard.press('R');
+  // Hold through at least one game frame. A synthetic down+up in the same
+  // task can be missed by Phaser's frame-polled JustDown state under CI load.
+  await page.keyboard.down('R');
+  await page.waitForTimeout(100);
+  await page.keyboard.up('R');
   await page.waitForFunction(
     (t) => (window as never as { __ccBattle: { fightToken: number } }).__ccBattle.fightToken !== t,
     tokenBefore,

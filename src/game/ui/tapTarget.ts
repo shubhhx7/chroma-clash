@@ -65,9 +65,14 @@ export function onTap(scene: Phaser.Scene, obj: Interactive, handler: () => void
     armed = false;
   };
   scene.input.on(Phaser.Input.Events.GAME_OUT, disarm);
+  scene.game.canvas.addEventListener('pointercancel', disarm);
 
-  obj.once(Phaser.GameObjects.Events.DESTROY, () => {
+  const cleanup = (): void => {
     scene.input.off(Phaser.Input.Events.POINTER_UP, onSceneUp);
     scene.input.off(Phaser.Input.Events.GAME_OUT, disarm);
-  });
+    scene.game.canvas.removeEventListener('pointercancel', disarm);
+    scene.events.off(Phaser.Scenes.Events.SHUTDOWN, cleanup);
+  };
+  obj.once(Phaser.GameObjects.Events.DESTROY, cleanup);
+  scene.events.once(Phaser.Scenes.Events.SHUTDOWN, cleanup);
 }
