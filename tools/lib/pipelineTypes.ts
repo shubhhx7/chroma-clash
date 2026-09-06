@@ -115,6 +115,13 @@ export interface EntryConfig {
   minSegX?: number;
   /** uniform cell grid override for alpha button sheets */
   cellGrid?: { cols: number; rows: number; squareTop?: boolean };
+  /**
+   * Stills picks address grid cells directly (band = row, index = col): the
+   * padded cell is cropped and only its largest solid component is kept.
+   * Used for button sheets whose cells carry caption plaques and cross-cell
+   * glow that band segmentation cannot separate cleanly.
+   */
+  cellButton?: boolean;
   output:
     | {
         kind: 'animation';

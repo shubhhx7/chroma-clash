@@ -4,13 +4,11 @@
   "processedPath": "assets_processed/ui/controls/special_disabled.png",
   "kind": "still",
   "width": 338,
-  "height": 331,
+  "height": 312,
   "sourceRect": {
-    "x": 46,
-    "y": 73,
-    "w": 338,
-    "h": 331,
-    "band": 0,
-    "index": 0
+    "x": 0,
+    "y": 0,
+    "w": 437,
+    "h": 536
   }
 }

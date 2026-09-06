@@ -3,14 +3,12 @@
   "source": "Assets/ui/controls/04_movement_control_sheet.png",
   "processedPath": "assets_processed/ui/controls/block_pressed.png",
   "kind": "still",
-  "width": 352,
-  "height": 345,
+  "width": 354,
+  "height": 325,
   "sourceRect": {
-    "x": 811,
-    "y": 63,
-    "w": 352,
-    "h": 345,
-    "band": 0,
-    "index": 2
+    "x": 753,
+    "y": 0,
+    "w": 477,
+    "h": 536
   }
 }

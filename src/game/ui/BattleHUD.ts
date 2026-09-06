@@ -86,7 +86,7 @@ export class BattleHUD {
     this.lastCssHeight = cssHeight;
     this.rescaleOverlay();
     this.promptText.setPosition(l.centerX, l.centerY + cssHeight * 0.24);
-    this.pauseButton.setPosition(l.pauseX, l.pauseY).setDisplaySize(l.pauseSize, l.pauseSize);
+    this.pauseButton.setPosition(l.pauseX, l.pauseY).setScale(l.pauseSize / Math.max(this.pauseButton.width, this.pauseButton.height));
   }
 
   get healthBarBottomY(): number {

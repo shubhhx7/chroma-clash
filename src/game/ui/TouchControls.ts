@@ -128,7 +128,12 @@ export class TouchControls {
   layout(cssWidth: number, cssHeight: number, safe: SafeAreaInsets, controlSizePx: number): void {
     const l = computeTouchLayout(cssWidth, cssHeight, safe, controlSizePx);
     const place = (action: InputAction, x: number, y: number, size: number): void => {
-      this.byAction.get(action)?.image.setPosition(x, y).setDisplaySize(size, size);
+      const image = this.byAction.get(action)?.image;
+      if (!image) return;
+      // uniform scale (not setDisplaySize): the cleaned button frames are
+      // near-square but not exact, and squashing them distorted the discs
+      const scale = size / Math.max(image.width, image.height);
+      image.setPosition(x, y).setScale(scale);
     };
     place(InputAction.MOVE_LEFT, l.leftBtnX, l.leftBtnY, l.size);
     place(InputAction.MOVE_RIGHT, l.rightBtnX, l.rightBtnY, l.size);

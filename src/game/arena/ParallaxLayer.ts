@@ -73,7 +73,9 @@ export class ParallaxLayer {
     if (!this.image) return;
 
     if (cfg.fit === 'cover') {
-      const scale = Math.max((viewWidth + 8) / tex.width, (viewHeight + 8) / tex.height);
+      // 48 world units of overscan: camera shake (up to ~15px) must never
+      // reveal the background colour beyond the sky's edge
+      const scale = Math.max((viewWidth + 48) / tex.width, (viewHeight + 48) / tex.height);
       this.image.setOrigin(0.5, 0.5);
       this.image.setScale(scale);
       this.image.setPosition(centerX, centerY);

@@ -38,7 +38,11 @@ export class ArenaBuilder {
       this.layers.push(layer);
     };
 
-    add(new ParallaxLayer(this.scene, { textureKey: TEX.ARENA_SKY, fit: 'cover', depth: DEPTHS.SKY, scrollFactor: 0 }));
+    // scrollFactor MUST be 1: this camera is centred on world x=0 (negative
+    // scrollX) and Phaser draws scrollFactor-0 objects as if scroll were 0,
+    // which shifted the sky left and exposed a black band on wide desktops.
+    // The camera never scrolls in a fight, so parallax is unaffected.
+    add(new ParallaxLayer(this.scene, { textureKey: TEX.ARENA_SKY, fit: 'cover', depth: DEPTHS.SKY, scrollFactor: 1 }));
     add(
       new ParallaxLayer(this.scene, {
         textureKey: TEX.ARENA_HAZE,

@@ -210,7 +210,8 @@
           }
         ]
       },
-      "minAlpha": 90
+      "minAlpha": 90,
+      "cellButton": true
     },
     {
       "id": "block-button",
@@ -238,7 +239,8 @@
           }
         ]
       },
-      "minAlpha": 90
+      "minAlpha": 90,
+      "cellButton": true
     },
     {
       "id": "pause-button",
@@ -266,7 +268,8 @@
           }
         ]
       },
-      "minAlpha": 90
+      "minAlpha": 90,
+      "cellButton": true
     },
     {
       "id": "movement-arrows",
@@ -306,7 +309,8 @@
           }
         ]
       },
-      "minAlpha": 90
+      "minAlpha": 90,
+      "cellButton": true
     },
     {
       "id": "fight-overlays",
@@ -479,7 +483,8 @@
             "squareTop": true
           }
         ]
-      }
+      },
+      "cellButton": true
     },
     {
       "id": "special-button",
@@ -507,7 +512,8 @@
             "squareTop": true
           }
         ]
-      }
+      },
+      "cellButton": true
     },
     {
       "id": "arena-floor-strip",

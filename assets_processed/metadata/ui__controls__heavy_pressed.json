@@ -3,14 +3,12 @@
   "source": "Assets/ui/controls/01_attack_button_sheet.png",
   "processedPath": "assets_processed/ui/controls/heavy_pressed.png",
   "kind": "still",
-  "width": 352,
-  "height": 345,
+  "width": 363,
+  "height": 355,
   "sourceRect": {
-    "x": 39,
-    "y": 496,
-    "w": 352,
-    "h": 345,
-    "band": 1,
-    "index": 0
+    "x": 0,
+    "y": 456,
+    "w": 437,
+    "h": 536
   }
 }

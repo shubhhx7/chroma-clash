@@ -934,6 +934,120 @@ export function cropCellMasked(
  * bake around characters) — reads as a dark rectangular smudge over bright
  * arenas. Fully opaque dark pixels (hair, armor) are untouched.
  */
+/**
+ * Keep only the largest connected component of strong-alpha pixels (plus a
+ * feather halo so its soft glow rim survives), erasing everything else.
+ *
+ * The AI-generated control-button sheets place each button above a caption
+ * plaque and let glows spill across cell borders, so a grid crop always
+ * carries plaque slabs and neighbouring slivers. The button disc is the
+ * largest solid component of its padded cell; everything else is junk.
+ */
+export function isolateLargestComponent(frame: RawImage, threshold = 150, feather = 8): RawImage {
+  const { width: w, height: h } = frame;
+  const labels = new Int32Array(w * h).fill(-1);
+  let bestLabel = -1;
+  let bestArea = 0;
+  let nextLabel = 0;
+  const stack: number[] = [];
+  for (let i = 0; i < w * h; i++) {
+    if (labels[i]! >= 0 || frame.data[i * 4 + 3]! < threshold) continue;
+    const id = nextLabel++;
+    let area = 0;
+    stack.push(i);
+    labels[i] = id;
+    while (stack.length) {
+      const cur = stack.pop()!;
+      area++;
+      const cx = cur % w;
+      const cy = (cur / w) | 0;
+      for (let dy = -1; dy <= 1; dy++) {
+        for (let dx = -1; dx <= 1; dx++) {
+          if (dx === 0 && dy === 0) continue;
+          const nx = cx + dx;
+          const ny = cy + dy;
+          if (nx < 0 || ny < 0 || nx >= w || ny >= h) continue;
+          const ni = ny * w + nx;
+          if (labels[ni]! >= 0 || frame.data[ni * 4 + 3]! < threshold) continue;
+          labels[ni] = id;
+          stack.push(ni);
+        }
+      }
+    }
+    if (area > bestArea) {
+      bestArea = area;
+      bestLabel = id;
+    }
+  }
+  if (bestLabel < 0) return frame;
+  let mask = new Uint8Array(w * h);
+  for (let i = 0; i < w * h; i++) if (labels[i] === bestLabel) mask[i] = 1;
+  for (let it = 0; it < feather; it++) {
+    const grown = mask.slice();
+    for (let y = 0; y < h; y++) {
+      for (let x = 0; x < w; x++) {
+        const i = y * w + x;
+        if (mask[i]!) continue;
+        if ((x > 0 && mask[i - 1]!) || (x < w - 1 && mask[i + 1]!) || (y > 0 && mask[i - w]!) || (y < h - 1 && mask[i + w]!)) {
+          grown[i] = 1;
+        }
+      }
+    }
+    mask = grown;
+  }
+  const out: RawImage = { data: Buffer.from(frame.data), width: w, height: h };
+  for (let i = 0; i < w * h; i++) if (!mask[i]!) out.data[i * 4 + 3] = 0;
+  return out;
+}
+
+/**
+ * Cut away a caption plaque fused to the bottom of a button disc.
+ *
+ * The disc is round, so its strong-alpha row coverage tapers toward the
+ * bottom; the plaque below widens again. The cut goes through the narrowest
+ * row (the waist) in the lower part of the frame — but only when coverage
+ * genuinely rises again further down, so a plain disc with no plaque is
+ * never truncated.
+ */
+export function cutBelowWaist(frame: RawImage, threshold = 150): RawImage {
+  const { width: w, height: h } = frame;
+  if (h < 24) return frame;
+  const profile: number[] = [];
+  let maxCov = 0;
+  for (let y = 0; y < h; y++) {
+    let n = 0;
+    for (let x = 0; x < w; x++) if (frame.data[(y * w + x) * 4 + 3]! >= threshold) n++;
+    const cov = n / w;
+    profile.push(cov);
+    if (cov > maxCov) maxCov = cov;
+  }
+  if (maxCov <= 0) return frame;
+  let cut = -1;
+  let cutCov = Infinity;
+  for (let y = Math.floor(h * 0.55); y < h - 2; y++) {
+    const cov = profile[y]!;
+    if (cov >= maxCov * 0.5 || cov >= cutCov) continue;
+    // a plaque must actually exist below this row
+    let rises = false;
+    for (let y2 = y + 2; y2 < h; y2++) {
+      if (profile[y2]! >= cov + 0.12) {
+        rises = true;
+        break;
+      }
+    }
+    if (rises) {
+      cut = y;
+      cutCov = cov;
+    }
+  }
+  if (cut < 0) return frame;
+  const out: RawImage = { data: Buffer.from(frame.data), width: w, height: h };
+  for (let y = cut; y < h; y++) {
+    for (let x = 0; x < w; x++) out.data[(y * w + x) * 4 + 3] = 0;
+  }
+  return out;
+}
+
 export function stripDarkHaze(img: RawImage, maxAlpha = 170, maxLum = 100): RawImage {
   const out = Buffer.from(img.data);
   for (let i = 0; i < out.length; i += 4) {

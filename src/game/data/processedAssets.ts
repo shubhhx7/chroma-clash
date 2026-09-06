@@ -563,86 +563,86 @@ export const PROCESSED_STILLS = {
   "ui.controls.attack_default": {
     "url": "ui/controls/attack_default.png",
     "source": "Assets/ui/controls/01_attack_button_sheet.png",
-    "width": 348,
-    "height": 341
+    "width": 350,
+    "height": 338
   },
   "ui.controls.attack_pressed": {
     "url": "ui/controls/attack_pressed.png",
     "source": "Assets/ui/controls/01_attack_button_sheet.png",
-    "width": 340,
+    "width": 342,
     "height": 333
   },
   "ui.controls.block_default": {
     "url": "ui/controls/block_default.png",
     "source": "Assets/ui/controls/04_movement_control_sheet.png",
-    "width": 357,
-    "height": 350
+    "width": 358,
+    "height": 336
   },
   "ui.controls.block_pressed": {
     "url": "ui/controls/block_pressed.png",
     "source": "Assets/ui/controls/04_movement_control_sheet.png",
-    "width": 352,
-    "height": 345
+    "width": 354,
+    "height": 325
   },
   "ui.controls.heavy_default": {
     "url": "ui/controls/heavy_default.png",
     "source": "Assets/ui/controls/01_attack_button_sheet.png",
-    "width": 356,
+    "width": 363,
     "height": 349
   },
   "ui.controls.heavy_pressed": {
     "url": "ui/controls/heavy_pressed.png",
     "source": "Assets/ui/controls/01_attack_button_sheet.png",
-    "width": 352,
-    "height": 345
+    "width": 363,
+    "height": 355
   },
   "ui.controls.move_left_default": {
     "url": "ui/controls/move_left_default.png",
     "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
-    "width": 271,
-    "height": 266
+    "width": 260,
+    "height": 261
   },
   "ui.controls.move_left_pressed": {
     "url": "ui/controls/move_left_pressed.png",
     "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
-    "width": 275,
-    "height": 270
+    "width": 264,
+    "height": 264
   },
   "ui.controls.move_right_default": {
     "url": "ui/controls/move_right_default.png",
     "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
-    "width": 285,
-    "height": 279
+    "width": 257,
+    "height": 260
   },
   "ui.controls.move_right_pressed": {
     "url": "ui/controls/move_right_pressed.png",
     "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
-    "width": 278,
-    "height": 272
+    "width": 260,
+    "height": 263
   },
   "ui.controls.pause_default": {
     "url": "ui/controls/pause_default.png",
     "source": "Assets/ui/controls/03_special_ability_button_sheet.png",
-    "width": 309,
+    "width": 310,
     "height": 303
   },
   "ui.controls.pause_pressed": {
     "url": "ui/controls/pause_pressed.png",
     "source": "Assets/ui/controls/03_special_ability_button_sheet.png",
-    "width": 308,
-    "height": 302
+    "width": 309,
+    "height": 299
   },
   "ui.controls.special_disabled": {
     "url": "ui/controls/special_disabled.png",
     "source": "Assets/ui/controls/05_pause_settings_control_sheet.png",
     "width": 338,
-    "height": 331
+    "height": 312
   },
   "ui.controls.special_ready": {
     "url": "ui/controls/special_ready.png",
     "source": "Assets/ui/controls/05_pause_settings_control_sheet.png",
-    "width": 352,
-    "height": 345
+    "width": 354,
+    "height": 323
   },
   "ui.hud.combo.combo_x10": {
     "url": "ui/hud/combo/combo_x10.png",

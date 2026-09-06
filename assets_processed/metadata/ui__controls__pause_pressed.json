@@ -3,14 +3,12 @@
   "source": "Assets/ui/controls/03_special_ability_button_sheet.png",
   "processedPath": "assets_processed/ui/controls/pause_pressed.png",
   "kind": "still",
-  "width": 308,
-  "height": 302,
+  "width": 309,
+  "height": 299,
   "sourceRect": {
-    "x": 453,
-    "y": 88,
-    "w": 308,
-    "h": 302,
-    "band": 0,
-    "index": 1
+    "x": 357,
+    "y": 0,
+    "w": 476,
+    "h": 536
   }
 }

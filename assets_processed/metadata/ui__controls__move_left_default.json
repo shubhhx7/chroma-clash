@@ -3,14 +3,12 @@
   "source": "Assets/ui/hud/06_fight_ready_go_overlay_sheet.png",
   "processedPath": "assets_processed/ui/controls/move_left_default.png",
   "kind": "still",
-  "width": 271,
-  "height": 266,
+  "width": 260,
+  "height": 261,
   "sourceRect": {
-    "x": 91,
-    "y": 496,
-    "w": 271,
-    "h": 266,
-    "band": 1,
-    "index": 0
+    "x": 0,
+    "y": 456,
+    "w": 437,
+    "h": 536
   }
 }

@@ -32,6 +32,8 @@ import {
   keyBlackBorder,
   keyWhiteBorder,
   retrimAlpha,
+  isolateLargestComponent,
+  cutBelowWaist,
   segmentsByCellComponents,
   cropCellMasked,
   type CellComponentResult,
@@ -389,6 +391,41 @@ async function processEntry(entry: EntryConfig, scan: boolean): Promise<void> {
     }
   } else {
     for (const pick of out.pick) {
+      if (entry.cellButton && entry.cellGrid) {
+        // Grid-addressed button pick: crop the padded cell, keep only its
+        // largest solid component (the button disc) and retrim. This drops
+        // the caption plaque under each button and the neighbouring cells'
+        // glow slivers that fixed-grid slicing used to carry into the frame.
+        const { cols, rows } = entry.cellGrid;
+        const cellW = img.width / cols;
+        const cellH = img.height / rows;
+        const col = pick.index ?? 0;
+        const row = pick.band;
+        const pad = Math.round(Math.min(cellW, cellH) * 0.1);
+        const x0 = Math.max(0, Math.round(col * cellW) - pad);
+        const y0 = Math.max(0, Math.round(row * cellH) - pad);
+        const cellRect = {
+          x: x0,
+          y: y0,
+          w: Math.min(img.width, Math.round((col + 1) * cellW) + pad) - x0,
+          h: Math.min(img.height, Math.round((row + 1) * cellH) + pad) - y0,
+        };
+        const frame = retrimAlpha(cutBelowWaist(isolateLargestComponent(crop(processed, cellRect), 150, 8)));
+        const rel = `${out.dir}/${pick.name}`;
+        const outPath = path.join(OUT_ROOT, `${rel}.png`);
+        await savePNG(frame, outPath);
+        await writeMeta(rel, {
+          id: `${entry.id}:${pick.name}`,
+          source: entry.source,
+          processedPath: path.relative(ROOT, outPath).split(path.sep).join('/'),
+          kind: 'still',
+          width: frame.width,
+          height: frame.height,
+          sourceRect: cellRect,
+        });
+        console.log(`  ok [${entry.id}] ${rel}.png (${frame.width}x${frame.height}, cell ${col},${row})`);
+        continue;
+      }
       let seg: Segment | null;
       if (pick.rect) {
         const rough = {
